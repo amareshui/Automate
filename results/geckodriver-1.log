@@ -1,0 +1,25 @@
+1711538775352	geckodriver	INFO	Listening on 127.0.0.1:50339
+1711538775427	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/Use ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g2/5hq4rr492w93jj1jkr5r5ssm0000gq/T/rust_mozprofileI5pqpH"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1711538779224	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1711538779500	Marionette	INFO	Listening on port 50430
+WebDriver BiDi listening on ws://127.0.0.1:50340
+Read port: 50430
+1711538779670	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+DevTools listening on ws://127.0.0.1:50340/devtools/browser/bca29b4f-f7aa-497d-92d1-b307e6ed7ee9
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://dev-tm.techmaster.in.th."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://dev-tm.techmaster.in.th."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://dev-tm.techmaster.in.th."
+JavaScript error: https://dev-tm.techmaster.in.th/src/helpers/fetch-wrapper.ts, line 71: Error: Unauthorized
+JavaScript error: resource://gre/modules/PrivateBrowsingUtils.sys.mjs, line 19: TypeError: aWindow is null
+JavaScript warning: https://dev-tm.techmaster.in.th/node_modules/.vite/deps/react-router-dom.js?v=424720ab, line 3208: Script terminated by timeout at:
+persistAppliedTransitions@https://dev-tm.techmaster.in.th/node_modules/.vite/deps/react-router-dom.js?v=424720ab:3208:1
+_saveAppliedTransitions@https://dev-tm.techmaster.in.th/node_modules/.vite/deps/react-router-dom.js?v=424720ab:1208:68
+
+1711538810455	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1711538871915	Marionette	INFO	Stopped listening on port 50430
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.error: "Failed to fetch https://spocs.getpocket.com/user:" "NetworkError when attempting to fetch resource."
