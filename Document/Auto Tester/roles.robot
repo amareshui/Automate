@@ -220,5 +220,5 @@ TC05-Search Filter
     Check Search And Filter
     Close All Browsers
 
-TC06-Check Pagination
-    Open Browser Web
+# TC06-Check Pagination
+#     Open Browser Web
