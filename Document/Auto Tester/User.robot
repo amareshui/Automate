@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Resource   ${CURDIR}/Login.robot
 
 *** Variables ***
 ${url}                                        https://dev-tm.techmaster.in.th/login
@@ -112,12 +113,12 @@ Open Browser Web
     Open Browser                           ${url}                                ${browser}
     Set Selenium Speed                     0.5s
 
-Input Data for Login Pass
-    Input Text                             ${locator_username}                    superadmin
-    Input Text                             ${locator_password}                    P@ssw0rd
-    # Click Element                        ${locator_btneye}
-    Click Element                          ${locator_btnlogin}
-    Wait Until Page Contains               Dashboard
+# Input Data for Login Pass
+#     Input Text                             ${locator_username}                    superadmin
+#     Input Text                             ${locator_password}                    P@ssw0rd
+#     # Click Element                        ${locator_btneye}
+#     Click Element                          ${locator_btnlogin}
+#     Wait Until Page Contains               Dashboard
 
 Check User Page
     Click Element                          ${locator_manu_user}

@@ -1,133 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on darwin)" generated="2024-04-18T11:24:22.659936" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.2 on darwin)" generated="2024-04-18T11:32:39.951502" rpa="false" schemaversion="5">
 <suite id="s1" name="Automate HUi" source="/Users/tester/Desktop/Automate HUi">
 <suite id="s1-s1" name="Document" source="/Users/tester/Desktop/Automate HUi/Document">
 <suite id="s1-s1-s1" name="Auto Tester" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester">
-<suite id="s1-s1-s1-s1" name="P'Beam" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/P'Beam">
-<suite id="s1-s1-s1-s1-s1" name="Himework1" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/P'Beam/Himework1">
-<suite id="s1-s1-s1-s1-s1-s1" name="Homework1" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/P'Beam/Himework1/Homework1.robot">
-<kw name="Set Selenium Speed" owner="SeleniumLibrary" type="SETUP">
-<arg>0.5s</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2024-04-18T11:24:22.730449" elapsed="0.000204"/>
-</kw>
-<test id="s1-s1-s1-s1-s1-s1-t1" name="TC001-login pass" line="15">
-<kw name="Open Browser Web" owner="Keyword" type="SETUP">
+<suite id="s1-s1-s1-s1" name="Login" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/Login.robot">
+<test id="s1-s1-s1-s1-t1" name="TC01-Login Pass" line="55">
+<kw name="Open Browser Web">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-18T11:24:22.731409" level="INFO">Opening browser 'chrome' to base url 'https://automate-test.stpb-digital.com/login/'.</msg>
+<msg time="2024-04-18T11:32:40.012552" level="INFO">Opening browser 'chrome' to base url 'https://dev-tm.techmaster.in.th/login'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-18T11:24:22.731284" elapsed="1.515504"/>
+<status status="PASS" start="2024-04-18T11:32:40.012360" elapsed="1.451596"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-04-18T11:24:24.247208" elapsed="0.874530"/>
+<status status="PASS" start="2024-04-18T11:32:41.465412" elapsed="0.489665"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_Email}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-18T11:24:25.122433" elapsed="1.035392"/>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-18T11:32:41.955508" elapsed="0.002088"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_password}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-18T11:24:26.158270" elapsed="1.033422"/>
+<status status="PASS" start="2024-04-18T11:32:40.011912" elapsed="1.946085"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_btnlogin}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-18T11:24:27.192113" elapsed="1.026729"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_create_account}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-18T11:24:28.219039" elapsed="1.021737"/>
-</kw>
-<status status="PASS" start="2024-04-18T11:24:22.731128" elapsed="6.510067"/>
-</kw>
-<kw name="Input data for login page" owner="Keyword">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_Email}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-18T11:24:29.242267" elapsed="1.022752"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_password}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-18T11:24:30.265395" elapsed="1.041883"/>
+<kw name="Input Data for Login Passing">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-18T11:32:41.962701" level="INFO">Typing text 'superadmin' into text field 'id=username'.</msg>
+<msg time="2024-04-18T11:32:43.087212" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-18T11:32:43.088279" level="FAIL">Element with locator 'id=username' not found.</msg>
+<arg>${locator_username}</arg>
+<arg>superadmin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2024-04-18T11:32:41.961903" elapsed="1.132249">Element with locator 'id=username' not found.</status>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-18T11:24:31.308772" level="INFO">Typing text 'user.test@krupbeam.com' into text field 'id = email'.</msg>
-<arg>${locator_Email}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-18T11:24:31.307878" elapsed="1.635748"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-18T11:24:32.944865" level="INFO">Typing text '123456789' into text field 'name = password'.</msg>
 <arg>${locator_password}</arg>
-<arg>${password}</arg>
+<arg>P@ssW0rd</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-18T11:24:32.944151" elapsed="1.551197"/>
+<status status="NOT RUN" start="2024-04-18T11:32:43.094836" elapsed="0.000418"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-18T11:24:34.496348" level="INFO">Clicking element 'xpath = //*[@id="__next"]/div[1]/div/div/div/div/div/form/div[2]/div/div/button'.</msg>
-<arg>${locator_btnunmark}</arg>
+<arg>${locator_btneye}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-18T11:24:34.495806" elapsed="1.045670"/>
+<status status="NOT RUN" start="2024-04-18T11:32:43.095504" elapsed="0.000130"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-18T11:24:35.542937" level="INFO">Clicking element 'id = btn-login'.</msg>
 <arg>${locator_btnlogin}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-18T11:24:35.542112" elapsed="1.061664"/>
+<status status="NOT RUN" start="2024-04-18T11:32:43.095799" elapsed="0.000092"/>
 </kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>Search Filters</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T11:24:36.603985" elapsed="0.510377"/>
+<status status="FAIL" start="2024-04-18T11:32:41.958859" elapsed="1.137628">Element with locator 'id=username' not found.</status>
 </kw>
-<arg>user.test@krupbeam.com</arg>
-<arg>123456789</arg>
-<status status="PASS" start="2024-04-18T11:24:29.241726" elapsed="7.873069"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>Kru P' Beam</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T11:24:37.115348" elapsed="0.521887"/>
-</kw>
-<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-04-18T11:24:37.639434" elapsed="0.569442"/>
+<status status="NOT RUN" start="2024-04-18T11:32:43.096890" elapsed="0.000170"/>
 </kw>
-<status status="PASS" start="2024-04-18T11:24:22.730763" elapsed="15.478269"/>
+<status status="FAIL" start="2024-04-18T11:32:40.011551" elapsed="3.086041">Element with locator 'id=username' not found.</status>
 </test>
-<status status="PASS" start="2024-04-18T11:24:22.677249" elapsed="15.532305"/>
+<status status="FAIL" start="2024-04-18T11:32:39.961658" elapsed="3.137029"/>
 </suite>
-<status status="PASS" start="2024-04-18T11:24:22.676693" elapsed="15.533522"/>
+<status status="FAIL" start="2024-04-18T11:32:39.961057" elapsed="3.139622"/>
 </suite>
-<status status="PASS" start="2024-04-18T11:24:22.676046" elapsed="15.534594"/>
+<status status="FAIL" start="2024-04-18T11:32:39.960433" elapsed="3.141914"/>
 </suite>
-<status status="PASS" start="2024-04-18T11:24:22.675573" elapsed="15.535616"/>
-</suite>
-<status status="PASS" start="2024-04-18T11:24:22.674942" elapsed="15.536674"/>
-</suite>
-<status status="PASS" start="2024-04-18T11:24:22.668177" elapsed="15.543759"/>
+<status status="FAIL" start="2024-04-18T11:32:39.953268" elapsed="3.150005"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Automate HUi">Automate HUi</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Document">Automate HUi.Document</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Auto Tester">Automate HUi.Document.Auto Tester</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="P'Beam">Automate HUi.Document.Auto Tester.P'Beam</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="Himework1">Automate HUi.Document.Auto Tester.P'Beam.Himework1</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1-s1" name="Homework1">Automate HUi.Document.Auto Tester.P'Beam.Himework1.Homework1</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Automate HUi">Automate HUi</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Document">Automate HUi.Document</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Auto Tester">Automate HUi.Document.Auto Tester</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Login">Automate HUi.Document.Auto Tester.Login</stat>
 </suite>
 </statistics>
 <errors>

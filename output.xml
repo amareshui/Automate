@@ -1,113 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on darwin)" generated="2024-04-18T11:24:22.468254" rpa="false" schemaversion="5">
-<suite id="s1" name="Homework1" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/P'Beam/Himework1/Homework1.robot">
-<kw name="Set Selenium Speed" owner="SeleniumLibrary" type="SETUP">
-<arg>0.5s</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2024-04-18T11:24:22.535675" elapsed="0.000199"/>
-</kw>
-<test id="s1-t1" name="TC001-login pass" line="15">
-<kw name="Open Browser Web" owner="Keyword" type="SETUP">
+<robot generator="Robot 7.0 (Python 3.12.2 on darwin)" generated="2024-04-18T11:32:39.981728" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/Login.robot">
+<test id="s1-t1" name="TC01-Login Pass" line="55">
+<kw name="Open Browser Web">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-18T11:24:22.536696" level="INFO">Opening browser 'chrome' to base url 'https://automate-test.stpb-digital.com/login/'.</msg>
+<msg time="2024-04-18T11:32:40.039230" level="INFO">Opening browser 'chrome' to base url 'https://dev-tm.techmaster.in.th/login'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-18T11:24:22.536503" elapsed="1.622123"/>
+<status status="PASS" start="2024-04-18T11:32:40.039056" elapsed="1.851485"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-04-18T11:24:24.159315" elapsed="0.878115"/>
+<status status="PASS" start="2024-04-18T11:32:41.891312" elapsed="0.369786"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_Email}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-18T11:24:25.038360" elapsed="1.039246"/>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-18T11:32:42.261299" elapsed="0.000283"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_password}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-18T11:24:26.077985" elapsed="1.033613"/>
+<status status="PASS" start="2024-04-18T11:32:40.038624" elapsed="2.223057"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_btnlogin}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-18T11:24:27.112090" elapsed="1.024464"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_create_account}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-18T11:24:28.137012" elapsed="1.030268"/>
-</kw>
-<status status="PASS" start="2024-04-18T11:24:22.536243" elapsed="6.631458"/>
-</kw>
-<kw name="Input data for login page" owner="Keyword">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_Email}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-18T11:24:29.169018" elapsed="1.024153"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_password}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-18T11:24:30.193620" elapsed="1.022023"/>
+<kw name="Input Data for Login Passing">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-18T11:32:42.262415" level="INFO">Typing text 'superadmin' into text field 'id=username'.</msg>
+<msg time="2024-04-18T11:32:43.363532" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-18T11:32:43.363951" level="FAIL">Element with locator 'id=username' not found.</msg>
+<arg>${locator_username}</arg>
+<arg>superadmin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2024-04-18T11:32:42.262158" elapsed="1.104295">Element with locator 'id=username' not found.</status>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-18T11:24:31.216607" level="INFO">Typing text 'user.test@krupbeam.com' into text field 'id = email'.</msg>
-<arg>${locator_Email}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-18T11:24:31.216106" elapsed="1.667916"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-18T11:24:32.885638" level="INFO">Typing text '123456789' into text field 'name = password'.</msg>
 <arg>${locator_password}</arg>
-<arg>${password}</arg>
+<arg>P@ssW0rd</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-18T11:24:32.884770" elapsed="1.566475"/>
+<status status="NOT RUN" start="2024-04-18T11:32:43.366784" elapsed="0.000140"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-18T11:24:34.452432" level="INFO">Clicking element 'xpath = //*[@id="__next"]/div[1]/div/div/div/div/div/form/div[2]/div/div/button'.</msg>
-<arg>${locator_btnunmark}</arg>
+<arg>${locator_btneye}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-18T11:24:34.451794" elapsed="1.060250"/>
+<status status="NOT RUN" start="2024-04-18T11:32:43.367084" elapsed="0.000085"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-18T11:24:35.513469" level="INFO">Clicking element 'id = btn-login'.</msg>
 <arg>${locator_btnlogin}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-18T11:24:35.512737" elapsed="1.073536"/>
+<status status="NOT RUN" start="2024-04-18T11:32:43.367300" elapsed="0.000073"/>
 </kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>Search Filters</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T11:24:36.586493" elapsed="0.513285"/>
+<status status="FAIL" start="2024-04-18T11:32:42.261937" elapsed="1.105624">Element with locator 'id=username' not found.</status>
 </kw>
-<arg>user.test@krupbeam.com</arg>
-<arg>123456789</arg>
-<status status="PASS" start="2024-04-18T11:24:29.168379" elapsed="7.931814"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>Kru P' Beam</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T11:24:37.100702" elapsed="0.519619"/>
-</kw>
-<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-04-18T11:24:37.621475" elapsed="0.573549"/>
+<status status="NOT RUN" start="2024-04-18T11:32:43.368073" elapsed="0.000097"/>
 </kw>
-<status status="PASS" start="2024-04-18T11:24:22.535984" elapsed="15.659254"/>
+<status status="FAIL" start="2024-04-18T11:32:40.038324" elapsed="3.330134">Element with locator 'id=username' not found.</status>
 </test>
-<status status="PASS" start="2024-04-18T11:24:22.470252" elapsed="15.725474"/>
+<status status="FAIL" start="2024-04-18T11:32:39.983269" elapsed="3.386242"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Homework1">Homework1</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Login">Login</stat>
 </suite>
 </statistics>
 <errors>
