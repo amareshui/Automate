@@ -56,7 +56,7 @@ Create Roles Page
 View Roles
     Click Element                           ${locator_icon_action}
     Wait Until Page Contains                View
-    Sleep                                   0.5s
+    Sleep                                   1s
     Click Element                           ${locator_btn_view}
     Wait Until Page Contains                View Roles
     Sleep                                   1s
