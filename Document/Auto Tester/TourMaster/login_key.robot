@@ -1,17 +1,6 @@
 *** Settings ***
-Library    SeleniumLibrary
-
-*** Variables ***
-${url}                        https://dev-tm.techmaster.in.th/login
-${browser}                    chrome
-${locator_username}           id=username
-${locator_no_username}        xpath=//*[@id="username_help"]/div
-${locator_password}           id=password
-${locator_no_password}        css=#password_help > div
-${locator_btneye}             xpath=//*[@id="root"]/div/div/div[2]/form/div[1]/div[2]/div[2]/div/div/div/div/div/span/span[2]/span
-${locator_btnlogin}           xpath=//*[@id="root"]/div/div/div[2]/form/div[2]/div/button
-${locator_err_user_pass}      xpath=//*[@id="root"]/div/div/div[2]/form/div[1]/div[2]/div[3]
-
+Library                        SeleniumLibrary
+Resource                       ${CURDIR}/login_var.robot
 
 *** Keywords ***
 Open Browser Web
@@ -46,24 +35,6 @@ Input Empty Data In Username And Password
     Input Text                      ${locator_password}        ${EMPTY}
     Click Element                   ${locator_btnlogin}
     ${text}=    Get Text            ${locator_no_username}
-    Should Be Equal As Strings      ${text}                    Please input your username!
+    Should Be Equal As Strings      ${text}                    Username is required
     ${text2}=    Get Text           ${locator_no_password}
-    Should Be Equal As Strings      ${text2}                   Please input your password!
-
-
-*** Test Cases ***
-TC01-Login Pass
-    Open Browser Web
-    Input Data for Login Pass
-    Close All Browsers
-
-TC02-Login Fail
-    Open Browser Web
-    Input Data for login fail
-    Close All Browsers
-
-TC03-Login No Username or Password
-    Open Browser Web
-    Input Empty Data In Username And Password
-    Close All Browsers
-    
+    Should Be Equal As Strings      ${text2}                   Password is required
