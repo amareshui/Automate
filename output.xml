@@ -1,343 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on darwin)" generated="2024-04-04T15:23:16.420147" rpa="false" schemaversion="5">
-<suite id="s1" name="Testloginloop" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/testloginloop.robot">
-<test id="s1-t1" name="Verify Input Data fail" line="56">
-<kw name="Create List" owner="BuiltIn">
-<msg time="2024-04-04T15:23:16.508302" level="INFO">@{list} = [ 0000000000 | 123 | lllllllll | กกก | dfgdดกเก | สสส ]</msg>
-<var>@{list}</var>
-<arg>0000000000</arg>
-<arg>123</arg>
-<arg>lllllllll</arg>
-<arg>กกก</arg>
-<arg>dfgdดกเก</arg>
-<arg>สสส</arg>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2024-04-04T15:23:16.507614" elapsed="0.002169"/>
+<robot generator="Robot 7.0 (Python 3.12.2 on darwin)" generated="2024-04-18T11:24:22.468254" rpa="false" schemaversion="5">
+<suite id="s1" name="Homework1" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/P'Beam/Himework1/Homework1.robot">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary" type="SETUP">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-18T11:24:22.535675" elapsed="0.000199"/>
 </kw>
-<for flavor="IN">
-<iter>
-<kw name="Open Website">
+<test id="s1-t1" name="TC001-login pass" line="15">
+<kw name="Open Browser Web" owner="Keyword" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-04T15:23:16.511059" level="INFO">Opening browser 'chrome' to base url 'https://automate-test.stpb-digital.com/login/'.</msg>
+<msg time="2024-04-18T11:24:22.536696" level="INFO">Opening browser 'chrome' to base url 'https://automate-test.stpb-digital.com/login/'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-04T15:23:16.510900" elapsed="1.276661"/>
+<status status="PASS" start="2024-04-18T11:24:22.536503" elapsed="1.622123"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-04-04T15:23:17.789600" elapsed="0.528322"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>Welcome to Kru P' Beam!</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-04T15:23:18.318269" elapsed="0.006385"/>
-</kw>
-<status status="PASS" start="2024-04-04T15:23:16.510682" elapsed="1.814099"/>
-</kw>
-<kw name="Input Data">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_email}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-04T15:23:18.325174" elapsed="0.011400"/>
+<status status="PASS" start="2024-04-18T11:24:24.159315" elapsed="0.878115"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_password}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-04T15:23:18.336749" elapsed="0.013784"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-04T15:23:18.351808" level="INFO">Typing text '0000000000' into text field 'id = email'.</msg>
 <arg>${locator_Email}</arg>
-<arg>${input_email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-04T15:23:18.351209" elapsed="0.104416"/>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-18T11:24:25.038360" elapsed="1.039246"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_password}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-18T11:24:26.077985" elapsed="1.033613"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_btnlogin}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-18T11:24:27.112090" elapsed="1.024464"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_create_account}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-18T11:24:28.137012" elapsed="1.030268"/>
+</kw>
+<status status="PASS" start="2024-04-18T11:24:22.536243" elapsed="6.631458"/>
+</kw>
+<kw name="Input data for login page" owner="Keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_Email}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-18T11:24:29.169018" elapsed="1.024153"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_password}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-18T11:24:30.193620" elapsed="1.022023"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-04T15:23:18.456378" level="INFO">Typing text '123' into text field 'name = password'.</msg>
-<arg>${locator_password}</arg>
-<arg>${input_password}</arg>
+<msg time="2024-04-18T11:24:31.216607" level="INFO">Typing text 'user.test@krupbeam.com' into text field 'id = email'.</msg>
+<arg>${locator_Email}</arg>
+<arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-04T15:23:18.455895" elapsed="0.061571"/>
+<status status="PASS" start="2024-04-18T11:24:31.216106" elapsed="1.667916"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-18T11:24:32.885638" level="INFO">Typing text '123456789' into text field 'name = password'.</msg>
+<arg>${locator_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-18T11:24:32.884770" elapsed="1.566475"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-04T15:23:18.517849" level="INFO">Clicking element 'id = btn-login'.</msg>
-<arg>${locator_btnlogin}</arg>
+<msg time="2024-04-18T11:24:34.452432" level="INFO">Clicking element 'xpath = //*[@id="__next"]/div[1]/div/div/div/div/div/form/div[2]/div/div/button'.</msg>
+<arg>${locator_btnunmark}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-04T15:23:18.517652" elapsed="0.073285"/>
-</kw>
-<arg>${email}</arg>
-<arg>${pass}</arg>
-<status status="PASS" start="2024-04-04T15:23:18.324946" elapsed="0.266138"/>
-</kw>
-<kw name="Verify error massage email">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_err_email}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-04T15:23:18.591433" elapsed="0.018693"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-04-04T15:23:18.631631" level="INFO">${txt} = email must be a valid email</msg>
-<var>${txt}</var>
-<arg>${locator_err_email}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-04T15:23:18.610545" elapsed="0.021558"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${txt}</arg>
-<arg>email must be a valid email</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-04T15:23:18.632421" elapsed="0.000662"/>
-</kw>
-<status status="PASS" start="2024-04-04T15:23:18.591238" elapsed="0.042352"/>
-</kw>
-<kw name="Verrify error massage password">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_err_password}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-04T15:23:18.634850" elapsed="0.012417"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-04-04T15:23:18.654669" level="INFO">${txt_pass} = password must be at least 5 characters</msg>
-<var>${txt_pass}</var>
-<arg>${locator_err_password}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-04T15:23:18.647706" elapsed="0.007063"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${txt_pass}</arg>
-<arg>password must be at least 5 characters</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-04T15:23:18.654891" elapsed="0.000158"/>
-</kw>
-<status status="PASS" start="2024-04-04T15:23:18.634436" elapsed="0.020695"/>
-</kw>
-<kw name="Close All Browsers" owner="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-04-04T15:23:18.655221" elapsed="0.078058"/>
-</kw>
-<var name="${email}">0000000000</var>
-<var name="${pass}">123</var>
-<status status="PASS" start="2024-04-04T15:23:16.510531" elapsed="2.222863"/>
-</iter>
-<iter>
-<kw name="Open Website">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-04T15:23:18.734208" level="INFO">Opening browser 'chrome' to base url 'https://automate-test.stpb-digital.com/login/'.</msg>
-<arg>${url}</arg>
-<arg>${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-04T15:23:18.734001" elapsed="0.879011"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-04-04T15:23:19.613410" elapsed="0.880390"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>Welcome to Kru P' Beam!</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-04T15:23:20.493976" elapsed="0.007098"/>
-</kw>
-<status status="PASS" start="2024-04-04T15:23:18.733726" elapsed="1.767536"/>
-</kw>
-<kw name="Input Data">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_email}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-04T15:23:20.502281" elapsed="0.012371"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_password}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-04T15:23:20.514819" elapsed="0.009916"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-04T15:23:20.525095" level="INFO">Typing text 'lllllllll' into text field 'id = email'.</msg>
-<arg>${locator_Email}</arg>
-<arg>${input_email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-04T15:23:20.524910" elapsed="0.092015"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-04T15:23:20.617347" level="INFO">Typing text 'กกก' into text field 'name = password'.</msg>
-<arg>${locator_password}</arg>
-<arg>${input_password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-04T15:23:20.617143" elapsed="0.055611"/>
+<status status="PASS" start="2024-04-18T11:24:34.451794" elapsed="1.060250"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-04T15:23:20.673391" level="INFO">Clicking element 'id = btn-login'.</msg>
+<msg time="2024-04-18T11:24:35.513469" level="INFO">Clicking element 'id = btn-login'.</msg>
 <arg>${locator_btnlogin}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-04T15:23:20.672968" elapsed="0.041974"/>
-</kw>
-<arg>${email}</arg>
-<arg>${pass}</arg>
-<status status="PASS" start="2024-04-04T15:23:20.501483" elapsed="0.213708"/>
-</kw>
-<kw name="Verify error massage email">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_err_email}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-04T15:23:20.715597" elapsed="0.012649"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-04-04T15:23:20.739662" level="INFO">${txt} = email must be a valid email</msg>
-<var>${txt}</var>
-<arg>${locator_err_email}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-04T15:23:20.728479" elapsed="0.011331"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${txt}</arg>
-<arg>email must be a valid email</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-04T15:23:20.740139" elapsed="0.001276"/>
-</kw>
-<status status="PASS" start="2024-04-04T15:23:20.715357" elapsed="0.026220"/>
-</kw>
-<kw name="Verrify error massage password">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_err_password}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-04T15:23:20.742984" elapsed="0.020075"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-04-04T15:23:20.777989" level="INFO">${txt_pass} = password must be at least 5 characters</msg>
-<var>${txt_pass}</var>
-<arg>${locator_err_password}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-04T15:23:20.763386" elapsed="0.014791"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${txt_pass}</arg>
-<arg>password must be at least 5 characters</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-04T15:23:20.778338" elapsed="0.000182"/>
-</kw>
-<status status="PASS" start="2024-04-04T15:23:20.742486" elapsed="0.036100"/>
-</kw>
-<kw name="Close All Browsers" owner="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-04-04T15:23:20.779232" elapsed="0.067429"/>
-</kw>
-<var name="${email}">lllllllll</var>
-<var name="${pass}">กกก</var>
-<status status="PASS" start="2024-04-04T15:23:18.733557" elapsed="2.113240"/>
-</iter>
-<iter>
-<kw name="Open Website">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-04T15:23:20.848477" level="INFO">Opening browser 'chrome' to base url 'https://automate-test.stpb-digital.com/login/'.</msg>
-<arg>${url}</arg>
-<arg>${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-04T15:23:20.848087" elapsed="1.105503"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-04-04T15:23:21.954023" elapsed="0.498321"/>
+<status status="PASS" start="2024-04-18T11:24:35.512737" elapsed="1.073536"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>Welcome to Kru P' Beam!</arg>
+<arg>Search Filters</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-04T15:23:22.452526" elapsed="0.007038"/>
+<status status="PASS" start="2024-04-18T11:24:36.586493" elapsed="0.513285"/>
 </kw>
-<status status="PASS" start="2024-04-04T15:23:20.847364" elapsed="1.612348"/>
+<arg>user.test@krupbeam.com</arg>
+<arg>123456789</arg>
+<status status="PASS" start="2024-04-18T11:24:29.168379" elapsed="7.931814"/>
 </kw>
-<kw name="Input Data">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_email}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-04T15:23:22.460292" elapsed="0.011025"/>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Kru P' Beam</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-18T11:24:37.100702" elapsed="0.519619"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_password}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-04T15:23:22.471458" elapsed="0.009593"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-04T15:23:22.481347" level="INFO">Typing text 'dfgdดกเก' into text field 'id = email'.</msg>
-<arg>${locator_Email}</arg>
-<arg>${input_email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-04T15:23:22.481190" elapsed="0.120871"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-04T15:23:22.602585" level="INFO">Typing text 'สสส' into text field 'name = password'.</msg>
-<arg>${locator_password}</arg>
-<arg>${input_password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-04T15:23:22.602263" elapsed="0.066866"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-04T15:23:22.669595" level="INFO">Clicking element 'id = btn-login'.</msg>
-<arg>${locator_btnlogin}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-04T15:23:22.669404" elapsed="0.031375"/>
-</kw>
-<arg>${email}</arg>
-<arg>${pass}</arg>
-<status status="PASS" start="2024-04-04T15:23:22.459876" elapsed="0.241067"/>
-</kw>
-<kw name="Verify error massage email">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_err_email}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-04T15:23:22.702812" elapsed="0.012225"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-04-04T15:23:22.729575" level="INFO">${txt} = email must be a valid email</msg>
-<var>${txt}</var>
-<arg>${locator_err_email}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-04T15:23:22.715337" elapsed="0.014506"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${txt}</arg>
-<arg>email must be a valid email</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-04T15:23:22.730232" elapsed="0.000526"/>
-</kw>
-<status status="PASS" start="2024-04-04T15:23:22.701279" elapsed="0.029652"/>
-</kw>
-<kw name="Verrify error massage password">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_err_password}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-04T15:23:22.731615" elapsed="0.024434"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-04-04T15:23:22.783795" level="INFO">${txt_pass} = password must be at least 5 characters</msg>
-<var>${txt_pass}</var>
-<arg>${locator_err_password}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-04T15:23:22.756248" elapsed="0.027814"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${txt_pass}</arg>
-<arg>password must be at least 5 characters</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-04-04T15:23:22.784518" elapsed="0.000240"/>
-</kw>
-<status status="PASS" start="2024-04-04T15:23:22.731238" elapsed="0.053622"/>
-</kw>
-<kw name="Close All Browsers" owner="SeleniumLibrary">
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-04-04T15:23:22.784955" elapsed="0.086628"/>
+<status status="PASS" start="2024-04-18T11:24:37.621475" elapsed="0.573549"/>
 </kw>
-<var name="${email}">dfgdดกเก</var>
-<var name="${pass}">สสส</var>
-<status status="PASS" start="2024-04-04T15:23:20.846969" elapsed="2.024723"/>
-</iter>
-<var>${email}</var>
-<var>${pass}</var>
-<value>@{list}</value>
-<status status="PASS" start="2024-04-04T15:23:16.510181" elapsed="6.361582"/>
-</for>
-<status status="PASS" start="2024-04-04T15:23:16.507111" elapsed="6.364949"/>
+<status status="PASS" start="2024-04-18T11:24:22.535984" elapsed="15.659254"/>
 </test>
-<status status="PASS" start="2024-04-04T15:23:16.422274" elapsed="6.450231"/>
+<status status="PASS" start="2024-04-18T11:24:22.470252" elapsed="15.725474"/>
 </suite>
 <statistics>
 <total>
@@ -346,7 +107,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Testloginloop">Testloginloop</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Homework1">Homework1</stat>
 </suite>
 </statistics>
 <errors>
