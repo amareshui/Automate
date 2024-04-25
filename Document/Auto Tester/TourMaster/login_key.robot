@@ -34,7 +34,5 @@ Input Empty Data In Username And Password
     Input Text                      ${locator_username}        ${EMPTY}
     Input Text                      ${locator_password}        ${EMPTY}
     Click Element                   ${locator_btnlogin}
-    ${text}=    Get Text            ${locator_no_username}
-    Should Be Equal As Strings      ${text}                    Username is required
-    ${text2}=    Get Text           ${locator_no_password}
-    Should Be Equal As Strings      ${text2}                   Password is required
+    Wait Until Page Contains        Username is required
+    Wait Until Page Contains        Password is required

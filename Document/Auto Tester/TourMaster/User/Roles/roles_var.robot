@@ -26,7 +26,7 @@ ${locator_pagination_list_<}                  xpath=//*[@id="root"]/div/div/main
 ${locator_pagination_list_Num}                xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul/li[2]
 ${locator_pagination_list_>}                  xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul/li[4]
 
-# check roles page
+# check create roles page
 ${locator_create_roles_role_name}                  name=name
 ${locator_create_roles_selectall}                  xpath=//*[@id="root"]/div/div/main/div/div/div[2]/div/div[2]/div/div[2]/div
 ${locator_create_roles_dashboard_checkbox}         xpath=//*[@id="root"]/div/div/main/div/div/div[2]/div/div[2]/div/div[2]/table/tbody/tr[1]/td[1]/div/div[1]/div/label/span/input

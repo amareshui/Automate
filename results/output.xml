@@ -1,260 +1,253 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on darwin)" generated="2024-04-18T18:02:30.297814" rpa="false" schemaversion="5">
-<suite id="s1" name="Automate HUi" source="/Users/tester/Desktop/Automate HUi">
-<suite id="s1-s1" name="Document" source="/Users/tester/Desktop/Automate HUi/Document">
-<suite id="s1-s1-s1" name="Auto Tester" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester">
-<suite id="s1-s1-s1-s1" name="TourMaster" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/TourMaster">
-<suite id="s1-s1-s1-s1-s1" name="User" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/TourMaster/User">
-<suite id="s1-s1-s1-s1-s1-s1" name="Roles" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/TourMaster/User/Roles">
-<suite id="s1-s1-s1-s1-s1-s1-s1" name="Roles" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/TourMaster/User/Roles/roles.robot">
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-04-26T00:47:35.436499" rpa="false" schemaversion="5">
+<suite id="s1" name="Automate" source="D:\Automate TTD\Automate">
+<suite id="s1-s1" name="Document" source="D:\Automate TTD\Automate\Document">
+<suite id="s1-s1-s1" name="Auto Tester" source="D:\Automate TTD\Automate\Document\Auto Tester">
+<suite id="s1-s1-s1-s1" name="TourMaster" source="D:\Automate TTD\Automate\Document\Auto Tester\TourMaster">
+<suite id="s1-s1-s1-s1-s1" name="Login" source="D:\Automate TTD\Automate\Document\Auto Tester\TourMaster\Login.robot">
 <kw name="Set Selenium Speed" owner="SeleniumLibrary" type="SETUP">
 <arg>0.5s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2024-04-18T18:02:30.362263" elapsed="0.000228"/>
+<status status="PASS" start="2024-04-26T00:47:35.699592" elapsed="0.001000"/>
 </kw>
-<test id="s1-s1-s1-s1-s1-s1-s1-t1" name="TC03-View Roles page" line="19">
-<kw name="Open Browser Web" owner="roles_key" type="SETUP">
+<test id="s1-s1-s1-s1-s1-t1" name="TC01-Login Pass" line="10">
+<kw name="Open Browser Web" owner="login_key" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-18T18:02:30.363367" level="INFO">Opening browser 'chrome' to base url 'https://dev-tm.techmaster.in.th/login'.</msg>
+<msg time="2024-04-26T00:47:35.701593" level="INFO">Opening browser 'chrome' to base url 'https://dev-tm.techmaster.in.th/login'.</msg>
+<msg time="2024-04-26T00:47:36.441160" level="WARN">The chromedriver version (123.0.6312.86) detected in PATH at C:\WebDriver\bin\chromedriver.exe might not be compatible with the detected chrome version (124.0.6367.61); currently, chromedriver 124.0.6367.78 is recommended for chrome 124.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-18T18:02:30.363155" elapsed="2.355267"/>
+<status status="PASS" start="2024-04-26T00:47:35.701593" elapsed="3.680382"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-26T00:47:39.381975" elapsed="0.624427"/>
 </kw>
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
 <arg>0.5s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2024-04-18T18:02:32.719216" elapsed="0.000817"/>
+<status status="PASS" start="2024-04-26T00:47:40.006402" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-04-18T18:02:30.362965" elapsed="2.357281"/>
+<status status="PASS" start="2024-04-26T00:47:35.700592" elapsed="4.306815"/>
 </kw>
-<kw name="Input Data for Login Pass" owner="roles_key">
+<kw name="Input Data for Login Pass" owner="login_key">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-18T18:02:32.721894" level="INFO">Typing text 'superadmin' into text field 'name=username'.</msg>
+<msg time="2024-04-26T00:47:40.008407" level="INFO">Typing text 'superadmin' into text field 'id=login999'.</msg>
 <arg>${locator_username}</arg>
 <arg>superadmin</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-18T18:02:32.721201" elapsed="1.686722"/>
+<status status="PASS" start="2024-04-26T00:47:40.008407" elapsed="1.593021"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-18T18:02:34.408880" level="INFO">Typing text 'P@ssw0rd' into text field 'name=password'.</msg>
+<msg time="2024-04-26T00:47:41.601932" level="INFO">Typing text 'P@ssW0rd' into text field 'id=pass999'.</msg>
 <arg>${locator_password}</arg>
-<arg>P@ssw0rd</arg>
+<arg>P@ssW0rd</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-18T18:02:34.408357" elapsed="1.581614"/>
+<status status="PASS" start="2024-04-26T00:47:41.601932" elapsed="1.608709"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-18T18:02:35.991894" level="INFO">Clicking element 'id=btn_login_submit'.</msg>
+<msg time="2024-04-26T00:47:43.211173" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div/div[2]/form/div[2]/span[1]/span[2]'.</msg>
+<arg>${locator_btneye}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-26T00:47:43.210641" elapsed="1.040772"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-26T00:47:44.251413" level="INFO">Clicking element 'id=btn_login_submit'.</msg>
 <arg>${locator_btnlogin}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-18T18:02:35.990599" elapsed="1.066391"/>
+<status status="PASS" start="2024-04-26T00:47:44.251413" elapsed="1.047306"/>
 </kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>Dashboard</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T18:02:37.057162" elapsed="0.512020"/>
-</kw>
-<status status="PASS" start="2024-04-18T18:02:32.720721" elapsed="4.848998"/>
-</kw>
-<kw name="Check Roles Page" owner="roles_key">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-18T18:02:37.571634" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/aside/div/ul/li[11]/div'.</msg>
-<arg>${locator_manu_user}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-18T18:02:37.571271" elapsed="1.064169"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_manu_roles}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-18T18:02:38.635889" elapsed="1.034051"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-18T18:02:40.673010" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-18T18:02:39.670561" elapsed="1.002873"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-18T18:02:40.674517" level="INFO">Clicking element 'id=user_roles'.</msg>
-<arg>${locator_manu_roles}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-18T18:02:40.673831" elapsed="1.102711"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>Roles</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T18:02:41.776721" elapsed="0.513674"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-18T18:02:44.291276" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-18T18:02:42.290597" elapsed="2.001443"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${locator_btn_Create}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T18:02:44.292584" elapsed="0.517880"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${locator_search}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T18:02:44.810870" elapsed="0.516464"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${locator_filter}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T18:02:45.327902" elapsed="0.518716"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${locator_table_roles}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T18:02:45.847188" elapsed="0.517000"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${locator_pagination_count}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T18:02:46.364780" elapsed="0.515532"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${locator_pagination_list_&lt;}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T18:02:46.881002" elapsed="0.514684"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${locator_pagination_list_Num}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T18:02:47.396376" elapsed="0.513426"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${locator_pagination_list_&gt;}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T18:02:47.910369" elapsed="0.515961"/>
-</kw>
-<status status="PASS" start="2024-04-18T18:02:37.570589" elapsed="10.855983"/>
-</kw>
-<kw name="View Roles" owner="roles_key">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-18T18:02:48.427924" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/div/div/div/table/tbody/tr[7]/td[5]/a'.</msg>
-<arg>${locator_icon_action}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-18T18:02:48.427550" elapsed="1.049682"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>View</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T18:02:49.477414" elapsed="0.511101"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-18T18:02:50.491663" level="INFO">Slept 500 milliseconds.</msg>
-<arg>0.5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-18T18:02:49.989136" elapsed="0.503262"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-18T18:02:50.493226" level="INFO">Clicking element 'xpath=/html/body/div[4]/div/ul/li[1]'.</msg>
-<arg>${locator_btn_view}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-18T18:02:50.492793" elapsed="1.208589"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>View Roles</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T18:02:51.701695" elapsed="0.520042"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-18T18:02:53.223406" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-18T18:02:52.222216" elapsed="1.001716"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-18T18:02:53.225178" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div/main/div/div/div[1]/div[2]/div/div[1]/button'.</msg>
-<arg>${locator_view_roles_btn_cancel}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-18T18:02:53.224531" elapsed="1.116738"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>Roles</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T18:02:54.341601" elapsed="0.514275"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-18T18:02:54.856658" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/div/div/div/table/tbody/tr[7]/td[5]/a'.</msg>
-<arg>${locator_icon_action}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-18T18:02:54.856156" elapsed="1.044621"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>View</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T18:02:55.901405" elapsed="0.515305"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-18T18:02:56.920058" level="INFO">Slept 500 milliseconds.</msg>
-<arg>0.5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-18T18:02:56.417525" elapsed="0.503077"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-18T18:02:56.921941" level="INFO">Clicking element 'xpath=/html/body/div[4]/div/ul/li[1]'.</msg>
-<arg>${locator_btn_view}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-18T18:02:56.921136" elapsed="1.207325"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>View Roles</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T18:02:58.129042" elapsed="0.519194"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-18T18:02:59.651232" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-18T18:02:58.648593" elapsed="1.002953"/>
-</kw>
-<status status="PASS" start="2024-04-18T18:02:48.427011" elapsed="11.224743"/>
+<status status="PASS" start="2024-04-26T00:47:40.007407" elapsed="5.291312"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-18T18:02:59.652503" elapsed="0.581271"/>
+<status status="PASS" start="2024-04-26T00:47:45.298719" elapsed="2.608603"/>
 </kw>
-<status status="PASS" start="2024-04-18T18:02:30.362595" elapsed="29.871496"/>
+<status status="PASS" start="2024-04-26T00:47:35.700592" elapsed="12.207731"/>
+</test>
+<test id="s1-s1-s1-s1-s1-t2" name="TC02-Login Fail" line="13">
+<kw name="Open Browser Web" owner="login_key" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-26T00:47:47.910509" level="INFO">Opening browser 'chrome' to base url 'https://dev-tm.techmaster.in.th/login'.</msg>
+<msg time="2024-04-26T00:47:48.256890" level="WARN">The chromedriver version (123.0.6312.86) detected in PATH at C:\WebDriver\bin\chromedriver.exe might not be compatible with the detected chrome version (124.0.6367.61); currently, chromedriver 124.0.6367.78 is recommended for chrome 124.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-26T00:47:47.910509" elapsed="3.022218"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-26T00:47:50.932727" elapsed="0.610891"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-26T00:47:51.543618" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-04-26T00:47:47.909509" elapsed="3.634109"/>
+</kw>
+<kw name="Input Data for login fail" owner="login_key">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-26T00:47:51.544781" level="INFO">Typing text 'superandmin' into text field 'id=login999'.</msg>
+<arg>${locator_username}</arg>
+<arg>superandmin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-26T00:47:51.544781" elapsed="1.594478"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-26T00:47:53.139259" level="INFO">Typing text '12345' into text field 'id=pass999'.</msg>
+<arg>${locator_password}</arg>
+<arg>12345</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-26T00:47:53.139259" elapsed="1.569062"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-26T00:47:54.708842" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div/div[2]/form/div[2]/span[1]/span[2]'.</msg>
+<arg>${locator_btneye}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-26T00:47:54.708321" elapsed="1.036571"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-26T00:47:55.744892" level="INFO">Clicking element 'id=btn_login_submit'.</msg>
+<arg>${locator_btnlogin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-26T00:47:55.744892" elapsed="1.044094"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-26T00:47:57.809097" level="INFO">${txt} = Incorrect username or password.</msg>
+<var>${txt}</var>
+<arg>${locator_err_user_pass}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-26T00:47:56.788986" elapsed="1.020111"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${txt}</arg>
+<arg>Incorrect username or password.</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-26T00:47:57.809097" elapsed="0.001006"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-26T00:47:57.810608" level="INFO">Clicking element 'id=btn_login_submit'.</msg>
+<arg>${locator_btnlogin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-26T00:47:57.810103" elapsed="1.035222"/>
+</kw>
+<status status="PASS" start="2024-04-26T00:47:51.544781" elapsed="7.300544"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-26T00:47:58.845325" elapsed="2.554040"/>
+</kw>
+<status status="PASS" start="2024-04-26T00:47:47.909509" elapsed="13.489856"/>
+</test>
+<test id="s1-s1-s1-s1-s1-t3" name="TC03-Login No Username or Password" line="16">
+<kw name="Open Browser Web" owner="login_key" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-26T00:48:01.403575" level="INFO">Opening browser 'chrome' to base url 'https://dev-tm.techmaster.in.th/login'.</msg>
+<msg time="2024-04-26T00:48:01.750242" level="WARN">The chromedriver version (123.0.6312.86) detected in PATH at C:\WebDriver\bin\chromedriver.exe might not be compatible with the detected chrome version (124.0.6367.61); currently, chromedriver 124.0.6367.78 is recommended for chrome 124.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-26T00:48:01.402576" elapsed="3.078998"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-26T00:48:04.481574" elapsed="0.615755"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-26T00:48:05.097329" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-04-26T00:48:01.402576" elapsed="3.694753"/>
+</kw>
+<kw name="Input Empty Data In Username And Password" owner="login_key">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-26T00:48:05.098475" level="INFO">Typing text '' into text field 'id=login999'.</msg>
+<arg>${locator_username}</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-26T00:48:05.098475" elapsed="1.572488"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-26T00:48:06.670963" level="INFO">Typing text '' into text field 'id=pass999'.</msg>
+<arg>${locator_password}</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-26T00:48:06.670963" elapsed="1.555207"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-26T00:48:08.226170" level="INFO">Clicking element 'id=btn_login_submit'.</msg>
+<arg>${locator_btnlogin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-26T00:48:08.226170" elapsed="1.047717"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-26T00:48:10.295514" level="INFO">${text} =  Username is required </msg>
+<var>${text}</var>
+<arg>${locator_no_username}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-26T00:48:09.273887" elapsed="1.021627"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2024-04-26T00:48:10.296522" level="FAIL"> Username is required  != Username is required</msg>
+<arg>${text}</arg>
+<arg>Username is required</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="FAIL" start="2024-04-26T00:48:10.295514" elapsed="0.002008"> Username is required  != Username is required</status>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<var>${text2}</var>
+<arg>${locator_no_password}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-04-26T00:48:10.297522" elapsed="0.000999"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${text2}</arg>
+<arg>Password is required</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-04-26T00:48:10.298521" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-04-26T00:48:05.097329" elapsed="5.201192"> Username is required  != Username is required</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-26T00:48:10.299522" elapsed="2.565608"/>
+</kw>
+<status status="FAIL" start="2024-04-26T00:48:01.401575" elapsed="11.463555"> Username is required  != Username is required</status>
 </test>
 <kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-04-18T18:03:00.235129" elapsed="0.000369"/>
+<status status="PASS" start="2024-04-26T00:48:12.866060" elapsed="0.000999"/>
 </kw>
-<status status="PASS" start="2024-04-18T18:02:30.310310" elapsed="29.925290"/>
+<status status="FAIL" start="2024-04-26T00:47:35.479729" elapsed="37.387330"/>
 </suite>
-<status status="PASS" start="2024-04-18T18:02:30.309840" elapsed="29.927075"/>
+<status status="FAIL" start="2024-04-26T00:47:35.476950" elapsed="37.392109"/>
 </suite>
-<status status="PASS" start="2024-04-18T18:02:30.309450" elapsed="29.928752"/>
+<status status="FAIL" start="2024-04-26T00:47:35.474880" elapsed="37.395179"/>
 </suite>
-<status status="PASS" start="2024-04-18T18:02:30.308914" elapsed="29.930078"/>
+<status status="FAIL" start="2024-04-26T00:47:35.471748" elapsed="37.399818"/>
 </suite>
-<status status="PASS" start="2024-04-18T18:02:30.308422" elapsed="29.931619"/>
-</suite>
-<status status="PASS" start="2024-04-18T18:02:30.307784" elapsed="29.932914"/>
-</suite>
-<status status="PASS" start="2024-04-18T18:02:30.299764" elapsed="29.941787"/>
+<status status="FAIL" start="2024-04-26T00:47:35.441501" elapsed="37.432073"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Automate HUi">Automate HUi</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Document">Automate HUi.Document</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Auto Tester">Automate HUi.Document.Auto Tester</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="TourMaster">Automate HUi.Document.Auto Tester.TourMaster</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="User">Automate HUi.Document.Auto Tester.TourMaster.User</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1-s1" name="Roles">Automate HUi.Document.Auto Tester.TourMaster.User.Roles</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1-s1-s1" name="Roles">Automate HUi.Document.Auto Tester.TourMaster.User.Roles.Roles</stat>
+<stat pass="2" fail="1" skip="0" id="s1" name="Automate">Automate</stat>
+<stat pass="2" fail="1" skip="0" id="s1-s1" name="Document">Automate.Document</stat>
+<stat pass="2" fail="1" skip="0" id="s1-s1-s1" name="Auto Tester">Automate.Document.Auto Tester</stat>
+<stat pass="2" fail="1" skip="0" id="s1-s1-s1-s1" name="TourMaster">Automate.Document.Auto Tester.TourMaster</stat>
+<stat pass="2" fail="1" skip="0" id="s1-s1-s1-s1-s1" name="Login">Automate.Document.Auto Tester.TourMaster.Login</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2024-04-26T00:47:36.441160" level="WARN">The chromedriver version (123.0.6312.86) detected in PATH at C:\WebDriver\bin\chromedriver.exe might not be compatible with the detected chrome version (124.0.6367.61); currently, chromedriver 124.0.6367.78 is recommended for chrome 124.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-04-26T00:47:48.256890" level="WARN">The chromedriver version (123.0.6312.86) detected in PATH at C:\WebDriver\bin\chromedriver.exe might not be compatible with the detected chrome version (124.0.6367.61); currently, chromedriver 124.0.6367.78 is recommended for chrome 124.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-04-26T00:48:01.750242" level="WARN">The chromedriver version (123.0.6312.86) detected in PATH at C:\WebDriver\bin\chromedriver.exe might not be compatible with the detected chrome version (124.0.6367.61); currently, chromedriver 124.0.6367.78 is recommended for chrome 124.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
