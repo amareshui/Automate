@@ -1,318 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on darwin)" generated="2024-04-18T18:02:30.255372" rpa="false" schemaversion="5">
-<suite id="s1" name="Roles" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/TourMaster/User/Roles/roles.robot">
+<robot generator="Robot 7.0 (Python 3.12.2 on darwin)" generated="2024-04-29T11:40:42.245942" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/TourMaster/Login.robot">
 <kw name="Set Selenium Speed" owner="SeleniumLibrary" type="SETUP">
 <arg>0.5s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2024-04-18T18:02:30.343808" elapsed="0.000172"/>
+<status status="PASS" start="2024-04-29T11:40:42.320499" elapsed="0.000177"/>
 </kw>
-<test id="s1-t1" name="TC03-View Roles page" line="19">
-<kw name="Open Browser Web" owner="roles_key" type="SETUP">
+<test id="s1-t1" name="TC03-Login No Username or Password" line="16">
+<kw name="Open Browser Web" owner="login_key" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-18T18:02:30.344631" level="INFO">Opening browser 'chrome' to base url 'https://dev-tm.techmaster.in.th/login'.</msg>
+<msg time="2024-04-29T11:40:42.321305" level="INFO">Opening browser 'chrome' to base url 'https://dev-tm.techmaster.in.th/login'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-18T18:02:30.344492" elapsed="2.646423"/>
+<status status="PASS" start="2024-04-29T11:40:42.321176" elapsed="2.560816"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-29T11:40:44.883359" elapsed="0.875800"/>
 </kw>
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
 <arg>0.5s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2024-04-18T18:02:32.991943" elapsed="0.000929"/>
+<status status="PASS" start="2024-04-29T11:40:45.759897" elapsed="0.000983"/>
 </kw>
-<status status="PASS" start="2024-04-18T18:02:30.344327" elapsed="2.648730"/>
+<status status="PASS" start="2024-04-29T11:40:42.321019" elapsed="3.440159"/>
 </kw>
-<kw name="Input Data for Login Pass" owner="roles_key">
+<kw name="Input Empty Data In Username And Password" owner="login_key">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-18T18:02:32.999930" level="INFO">Typing text 'superadmin' into text field 'name=username'.</msg>
+<msg time="2024-04-29T11:40:45.764044" level="INFO">Typing text '' into text field 'id=login999'.</msg>
 <arg>${locator_username}</arg>
-<arg>superadmin</arg>
+<arg>${EMPTY}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-18T18:02:32.994446" elapsed="1.667213"/>
+<status status="PASS" start="2024-04-29T11:40:45.762779" elapsed="1.594555"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-18T18:02:34.663290" level="INFO">Typing text 'P@ssw0rd' into text field 'name=password'.</msg>
+<msg time="2024-04-29T11:40:47.359380" level="INFO">Typing text '' into text field 'id=pass999'.</msg>
 <arg>${locator_password}</arg>
-<arg>P@ssw0rd</arg>
+<arg>${EMPTY}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-18T18:02:34.662756" elapsed="1.587714"/>
+<status status="PASS" start="2024-04-29T11:40:47.358015" elapsed="1.578348"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-18T18:02:36.251881" level="INFO">Clicking element 'id=btn_login_submit'.</msg>
+<msg time="2024-04-29T11:40:48.937235" level="INFO">Clicking element 'id=btn_login_submit'.</msg>
 <arg>${locator_btnlogin}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-18T18:02:36.251127" elapsed="1.060191"/>
+<status status="PASS" start="2024-04-29T11:40:48.936786" elapsed="1.059001"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>Dashboard</arg>
+<arg>Username is required</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T18:02:37.311599" elapsed="0.510861"/>
-</kw>
-<status status="PASS" start="2024-04-18T18:02:32.993734" elapsed="4.829041"/>
-</kw>
-<kw name="Check Roles Page" owner="roles_key">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-18T18:02:37.824332" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/aside/div/ul/li[11]/div'.</msg>
-<arg>${locator_manu_user}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-18T18:02:37.824026" elapsed="1.068237"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_manu_roles}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-18T18:02:38.892917" elapsed="1.031041"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-18T18:02:40.925732" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-18T18:02:39.924668" elapsed="1.002592"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-18T18:02:40.928680" level="INFO">Clicking element 'id=user_roles'.</msg>
-<arg>${locator_manu_roles}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-18T18:02:40.927962" elapsed="1.112037"/>
+<status status="PASS" start="2024-04-29T11:40:49.996217" elapsed="0.516072"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>Roles</arg>
+<arg>Password is required</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T18:02:42.040306" elapsed="0.518547"/>
+<status status="PASS" start="2024-04-29T11:40:50.512972" elapsed="0.520269"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-18T18:02:44.560916" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-18T18:02:42.559065" elapsed="2.002165"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${locator_btn_Create}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T18:02:44.561566" elapsed="0.515428"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${locator_search}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T18:02:45.077635" elapsed="0.514812"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${locator_filter}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T18:02:45.593313" elapsed="0.517250"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${locator_table_roles}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T18:02:46.110916" elapsed="0.518814"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${locator_pagination_count}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T18:02:46.630380" elapsed="0.516553"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${locator_pagination_list_&lt;}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T18:02:47.147408" elapsed="0.516323"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${locator_pagination_list_Num}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T18:02:47.664087" elapsed="0.516485"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${locator_pagination_list_&gt;}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T18:02:48.181448" elapsed="0.512771"/>
-</kw>
-<status status="PASS" start="2024-04-18T18:02:37.823476" elapsed="10.871243"/>
-</kw>
-<kw name="View Roles" owner="roles_key">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-18T18:02:48.697171" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/div/div/div/table/tbody/tr[7]/td[5]/a'.</msg>
-<arg>${locator_icon_action}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-18T18:02:48.696684" elapsed="1.043912"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>View</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-18T18:02:49.740809" elapsed="0.513028"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-18T18:02:50.757168" level="INFO">Slept 500 milliseconds.</msg>
-<arg>0.5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-18T18:02:50.254525" elapsed="0.502896"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-18T18:02:50.757906" level="INFO">Clicking element 'xpath=/html/body/div[4]/div/ul/li[1]'.</msg>
-<msg time="2024-04-18T18:02:51.858261" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-04-18T18:02:51.858787" level="FAIL">ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=124.0.6367.60)
-Stacktrace:
-0   chromedriver                        0x000000010327a934 chromedriver + 4368692
-1   chromedriver                        0x0000000103272dc8 chromedriver + 4337096
-2   chromedriver                        0x0000000102e96a68 chromedriver + 289384
-3   chromedriver                        0x0000000102ed9eac chromedriver + 564908
-4   chromedriver                        0x0000000102ecf940 chromedriver + 522560
-5   chromedriver                        0x0000000102ecf368 chromedriver + 521064
-6   chromedriver                        0x0000000102f115ec chromedriver + 792044
-7   chromedriver                        0x0000000102ecdab4 chromedriver + 514740
-8   chromedriver                        0x0000000102ece50c chromedriver + 517388
-9   chromedriver                        0x000000010323ee50 chromedriver + 4124240
-10  chromedriver                        0x0000000103243c40 chromedriver + 4144192
-11  chromedriver                        0x0000000103224818 chromedriver + 4016152
-12  chromedriver                        0x0000000103244570 chromedriver + 4146544
-13  chromedriver                        0x00000001032162cc chromedriver + 3957452
-14  chromedriver                        0x0000000103263eb8 chromedriver + 4275896
-15  chromedriver                        0x0000000103264034 chromedriver + 4276276
-16  chromedriver                        0x0000000103272a28 chromedriver + 4336168
-17  libsystem_pthread.dylib             0x0000000190c06f94 _pthread_start + 136
-18  libsystem_pthread.dylib             0x0000000190c01d34 thread_start + 8
-</msg>
-<arg>${locator_btn_view}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-04-18T18:02:50.757634" elapsed="1.110010">ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=124.0.6367.60)
-Stacktrace:
-0   chromedriver                        0x000000010327a934 chromedriver + 4368692
-1   chromedriver                        0x0000000103272dc8 chromedriver + 4337096
-2   chromedriver                        0x0000000102e96a68 chromedriver + 289384
-3   chromedriver                        0x0000000102ed9eac chromedriver + 564908
-4   chromedriver                        0x0000000102ecf940 chromedriver + 522560
-5   chromedriver                        0x0000000102ecf368 chromedriver + 521064
-6   chromedriver                        0x0000000102f115ec chromedriver + 792044
-7   chromedriver                        0x0000000102ecdab4 chromedriver + 514740
-8   chromedriver                        0x0000000102ece50c chromedriver + 517388
-9   chromedriver                        0x000000010323ee50 chromedriver + 4124240
-10  chromedriver                        0x0000000103243c40 chromedriver + 4144192
-11  chromedriver                        0x0000000103224818 chromedriver + 4016152
-12  chromedriver                        0x0000000103244570 chromedriver + 4146544
-13  chromedriver                        0x00000001032162cc chromedriver + 3957452
-14  chromedriver                        0x0000000103263eb8 chromedriver + 4275896
-15  chromedriver                        0x0000000103264034 chromedriver + 4276276
-16  chromedriver                        0x0000000103272a28 chromedriver + 4336168
-17  libsystem_pthread.dylib             0x0000000190c06f94 _pthread_start + 136
-18  libsystem_pthread.dylib             0x0000000190c01d34 thread_start + 8
-</status>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>View Roles</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="NOT RUN" start="2024-04-18T18:02:51.868039" elapsed="0.000131"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-04-18T18:02:51.868334" elapsed="0.000076"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<arg>${locator_view_roles_btn_cancel}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-04-18T18:02:51.869355" elapsed="0.000165"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>Roles</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="NOT RUN" start="2024-04-18T18:02:51.869725" elapsed="0.000092"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<arg>${locator_icon_action}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-04-18T18:02:51.869961" elapsed="0.000076"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>View</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="NOT RUN" start="2024-04-18T18:02:51.870160" elapsed="0.000064"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>0.5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-04-18T18:02:51.870340" elapsed="0.000072"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<arg>${locator_btn_view}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-04-18T18:02:51.870535" elapsed="0.000060"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>View Roles</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="NOT RUN" start="2024-04-18T18:02:51.870712" elapsed="0.000068"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-04-18T18:02:51.870887" elapsed="0.000056"/>
-</kw>
-<status status="FAIL" start="2024-04-18T18:02:48.695855" elapsed="3.175286">ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=124.0.6367.60)
-Stacktrace:
-0   chromedriver                        0x000000010327a934 chromedriver + 4368692
-1   chromedriver                        0x0000000103272dc8 chromedriver + 4337096
-2   chromedriver                        0x0000000102e96a68 chromedriver + 289384
-3   chromedriver                        0x0000000102ed9eac chromedriver + 564908
-4   chromedriver                        0x0000000102ecf940 chromedriver + 522560
-5   chromedriver                        0x0000000102ecf368 chromedriver + 521064
-6   chromedriver                        0x0000000102f115ec chromedriver + 792044
-7   chromedriver                        0x0000000102ecdab4 chromedriver + 514740
-8   chromedriver                        0x0000000102ece50c chromedriver + 517388
-9   chromedriver                        0x000000010323ee50 chromedriver + 4124240
-10  chromedriver                        0x0000000103243c40 chromedriver + 4144192
-11  chromedriver                        0x0000000103224818 chromedriver + 4016152
-12  chromedriver                        0x0000000103244570 chromedriver + 4146544
-13  chromedriver                        0x00000001032162cc chromedriver + 3957452
-14  chromedriver                        0x0000000103263eb8 chromedriver + 4275896
-15  chromedriver                        0x0000000103264034 chromedriver + 4276276
-16  chromedriver                        0x0000000103272a28 chromedriver + 4336168
-17  libsystem_pthread.dylib             0x0000000190c06f94 _pthread_start + 136
-18  libsystem_pthread.dylib             0x0000000190c01d34 thread_start + 8
-</status>
+<status status="PASS" start="2024-04-29T11:40:45.761926" elapsed="5.271759"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-18T18:02:51.871649" elapsed="0.563313"/>
+<status status="PASS" start="2024-04-29T11:40:51.034360" elapsed="0.573541"/>
 </kw>
-<status status="FAIL" start="2024-04-18T18:02:30.344076" elapsed="22.091162">ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=124.0.6367.60)
-Stacktrace:
-0   chromedriver                        0x000000010327a934 chromedriver + 4368692
-1   chromedriver                        0x0000000103272dc8 chromedriver + 4337096
-2   chromedriver                        0x0000000102e96a68 chromedriver + 289384
-3   chromedriver                        0x0000000102ed9eac chromedriver + 564908
-4   chromedriver                        0x0000000102ecf940 chromedriver + 522560
-5   chromedriver                        0x0000000102ecf368 chromedriver + 521064
-6   chromedriver                        0x0000000102f115ec chromedriver + 792044
-7   chromedriver                        0x0000000102ecdab4 chromedriver + 514740
-8   chromedriver                        0x0000000102ece50c chromedriver + 517388
-9   chromedriver                        0x000000010323ee50 chromedriver + 4124240
-10  chromedriver                        0x0000000103243c40 chromedriver + 4144192
-11  chromedriver                        0x0000000103224818 chromedriver + 4016152
-12  chromedriver                        0x0000000103244570 chromedriver + 4146544
-13  chromedriver                        0x00000001032162cc chromedriver + 3957452
-14  chromedriver                        0x0000000103263eb8 chromedriver + 4275896
-15  chromedriver                        0x0000000103264034 chromedriver + 4276276
-16  chromedriver                        0x0000000103272a28 chromedriver + 4336168
-17  libsystem_pthread.dylib             0x0000000190c06f94 _pthread_start + 136
-18  libsystem_pthread.dylib             0x0000000190c01d34 thread_start + 8
-</status>
+<status status="PASS" start="2024-04-29T11:40:42.320780" elapsed="9.287446"/>
 </test>
 <kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-04-18T18:02:52.436352" elapsed="0.000223"/>
+<status status="PASS" start="2024-04-29T11:40:51.609282" elapsed="0.000278"/>
 </kw>
-<status status="FAIL" start="2024-04-18T18:02:30.257489" elapsed="22.179168"/>
+<status status="PASS" start="2024-04-29T11:40:42.248481" elapsed="9.361179"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Roles">Roles</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login">Login</stat>
 </suite>
 </statistics>
 <errors>

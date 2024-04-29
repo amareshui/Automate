@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-04-26T00:47:35.436499" rpa="false" schemaversion="5">
 <suite id="s1" name="Automate" source="D:\Automate TTD\Automate">
 <suite id="s1-s1" name="Document" source="D:\Automate TTD\Automate\Document">
@@ -23,10 +24,36 @@
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
 <status status="PASS" start="2024-04-26T00:47:39.381975" elapsed="0.624427"/>
+=======
+<robot generator="Robot 7.0 (Python 3.12.2 on darwin)" generated="2024-04-29T11:40:42.433258" rpa="false" schemaversion="5">
+<suite id="s1" name="Automate HUi" source="/Users/tester/Desktop/Automate HUi">
+<suite id="s1-s1" name="Document" source="/Users/tester/Desktop/Automate HUi/Document">
+<suite id="s1-s1-s1" name="Auto Tester" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester">
+<suite id="s1-s1-s1-s1" name="TourMaster" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/TourMaster">
+<suite id="s1-s1-s1-s1-s1" name="Login" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/TourMaster/Login.robot">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary" type="SETUP">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-29T11:40:42.503341" elapsed="0.000433"/>
+</kw>
+<test id="s1-s1-s1-s1-s1-t1" name="TC03-Login No Username or Password" line="16">
+<kw name="Open Browser Web" owner="login_key" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-29T11:40:42.504658" level="INFO">Opening browser 'chrome' to base url 'https://dev-tm.techmaster.in.th/login'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-29T11:40:42.504507" elapsed="2.597722"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-29T11:40:45.103478" elapsed="0.869172"/>
+>>>>>>> b19ecb8 (change command login)
 </kw>
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
 <arg>0.5s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
+<<<<<<< HEAD
 <status status="PASS" start="2024-04-26T00:47:40.006402" elapsed="0.000000"/>
 </kw>
 <status status="PASS" start="2024-04-26T00:47:35.700592" elapsed="4.306815"/>
@@ -34,9 +61,19 @@
 <kw name="Input Data for Login Pass" owner="login_key">
 <kw name="Input Text" owner="SeleniumLibrary">
 <msg time="2024-04-26T00:47:40.008407" level="INFO">Typing text 'superadmin' into text field 'id=login999'.</msg>
+=======
+<status status="PASS" start="2024-04-29T11:40:45.973320" elapsed="0.001212"/>
+</kw>
+<status status="PASS" start="2024-04-29T11:40:42.504307" elapsed="3.470585"/>
+</kw>
+<kw name="Input Empty Data In Username And Password" owner="login_key">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-29T11:40:45.977583" level="INFO">Typing text '' into text field 'id=login999'.</msg>
+>>>>>>> b19ecb8 (change command login)
 <arg>${locator_username}</arg>
-<arg>superadmin</arg>
+<arg>${EMPTY}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<<<<<<< HEAD
 <status status="PASS" start="2024-04-26T00:47:40.008407" elapsed="1.593021"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
@@ -230,6 +267,54 @@
 <status status="FAIL" start="2024-04-26T00:47:35.471748" elapsed="37.399818"/>
 </suite>
 <status status="FAIL" start="2024-04-26T00:47:35.441501" elapsed="37.432073"/>
+=======
+<status status="PASS" start="2024-04-29T11:40:45.976265" elapsed="1.592315"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-29T11:40:47.571140" level="INFO">Typing text '' into text field 'id=pass999'.</msg>
+<arg>${locator_password}</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-29T11:40:47.569608" elapsed="1.574276"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-29T11:40:49.145124" level="INFO">Clicking element 'id=btn_login_submit'.</msg>
+<arg>${locator_btnlogin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-29T11:40:49.144447" elapsed="1.056240"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Username is required</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-29T11:40:50.201324" elapsed="0.516649"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Password is required</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-29T11:40:50.718431" elapsed="0.517858"/>
+</kw>
+<status status="PASS" start="2024-04-29T11:40:45.975613" elapsed="5.260921"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-29T11:40:51.236839" elapsed="0.568478"/>
+</kw>
+<status status="PASS" start="2024-04-29T11:40:42.503906" elapsed="9.301664"/>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-04-29T11:40:51.806461" elapsed="0.000426"/>
+</kw>
+<status status="PASS" start="2024-04-29T11:40:42.444534" elapsed="9.362472"/>
+</suite>
+<status status="PASS" start="2024-04-29T11:40:42.443769" elapsed="9.364465"/>
+</suite>
+<status status="PASS" start="2024-04-29T11:40:42.443140" elapsed="9.365947"/>
+</suite>
+<status status="PASS" start="2024-04-29T11:40:42.442504" elapsed="9.367307"/>
+</suite>
+<status status="PASS" start="2024-04-29T11:40:42.435105" elapsed="9.375350"/>
+>>>>>>> b19ecb8 (change command login)
 </suite>
 <statistics>
 <total>
@@ -238,11 +323,19 @@
 <tag>
 </tag>
 <suite>
+<<<<<<< HEAD
 <stat pass="2" fail="1" skip="0" id="s1" name="Automate">Automate</stat>
 <stat pass="2" fail="1" skip="0" id="s1-s1" name="Document">Automate.Document</stat>
 <stat pass="2" fail="1" skip="0" id="s1-s1-s1" name="Auto Tester">Automate.Document.Auto Tester</stat>
 <stat pass="2" fail="1" skip="0" id="s1-s1-s1-s1" name="TourMaster">Automate.Document.Auto Tester.TourMaster</stat>
 <stat pass="2" fail="1" skip="0" id="s1-s1-s1-s1-s1" name="Login">Automate.Document.Auto Tester.TourMaster.Login</stat>
+=======
+<stat pass="1" fail="0" skip="0" id="s1" name="Automate HUi">Automate HUi</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Document">Automate HUi.Document</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Auto Tester">Automate HUi.Document.Auto Tester</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="TourMaster">Automate HUi.Document.Auto Tester.TourMaster</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="Login">Automate HUi.Document.Auto Tester.TourMaster.Login</stat>
+>>>>>>> b19ecb8 (change command login)
 </suite>
 </statistics>
 <errors>
