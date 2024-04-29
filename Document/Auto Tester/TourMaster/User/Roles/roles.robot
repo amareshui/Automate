@@ -1,9 +1,9 @@
 *** Settings ***
-Library    SeleniumLibrary
-Resource   ${CURDIR}/roles_key.robot
-Suite Setup    Set Selenium Speed    0.5s
-Test Setup    Open Browser Web
-Test Teardown    Close Browser
+Library           SeleniumLibrary
+Resource          ${CURDIR}/roles_key.robot
+Suite Setup       Set Selenium Speed    0.5s
+Test Setup        Open Browser Web
+Test Teardown     Close Browser
 Suite Teardown    Close All Browsers
 
 *** Test Cases ***
@@ -32,5 +32,7 @@ TC05-Search Filter
     Check Roles Page
     Check Search And Filter
 
-# TC06-Check Pagination
-#     Open Browser Web
+TC06-Check Pagination
+    Input Data for Login Pass
+    Check Roles Page
+    Check Pagination

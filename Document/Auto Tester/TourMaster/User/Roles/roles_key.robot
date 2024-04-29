@@ -5,6 +5,7 @@ Resource               ${CURDIR}/roles_var.robot
 *** Keywords ***
 Open Browser Web
     Open Browser                           ${url}                                ${browser}
+    Maximize Browser Window
     Set Selenium Speed                     0.5s
 
 Input Data for Login Pass
@@ -88,6 +89,7 @@ Update Roles Pass
     Click Element                           ${locator_edit_roles_btn_save}
     Wait Until Page Contains                Warning
     Click Element                           ${locator_edit_roles_warning_save}
+    Sleep                                   1s
     Wait Until Page Contains                Roles
 
 Check Search And Filter
@@ -103,8 +105,17 @@ Check Search And Filter
     Click Element                           ${locator_search_filter_active}
     Click Element                           ${locator_search_filter_btn_clear}
     Wait Until Element Does Not Contain     ${locator_search_filter_status}    Active
+    Click Element                           ${locator_search_filter_status}
+    Click Element                           ${locator_search_filter_active}
     Input Text                              ${locator_search_filter_rolename}  test
     Click Element                           ${locator_search_filter_btn_search}
     Sleep                                   1s
-    Wait Until Page Contains                test2314
+    Wait Until Page Contains                test3
 
+Check Pagination
+    Click Element                           ${locator_pagination_list_>}
+    Wait Until Element Is Visible           ${locator_pagination_nextpage_row_16}
+    Wait Until Page Contains                superXXXXXX	
+    Click Element                           ${locator_pagination_list_<}
+    Wait Until Element Is Visible           ${locator_pagination_row_1}
+    Wait Until Page Contains                CEO
