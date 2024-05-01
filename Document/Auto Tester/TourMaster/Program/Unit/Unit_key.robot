@@ -54,7 +54,7 @@ Check create Page
 
 Check Search / Filter
     [Arguments]                            ${unitname}
-    Input Text                             ${locator_unit_search}                  ${unitname}
+    Input Text                             ${locator_unit_search_field}                  ${unitname}
     Wait Until Element Contains            ${locator_unit_search_table}            testets
     Element Should Be Disabled             ${locator_unit_search_filter}
     Click Element                          ${locator_unit_search_closeicon}

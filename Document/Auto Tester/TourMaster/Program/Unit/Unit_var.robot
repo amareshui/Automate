@@ -37,7 +37,7 @@ ${locator_create_unit_warning_ok}             xpath=/html/body/div[4]/div/div[2]
 
 # Check Search / Filter
 ${locator_unit_search_bar}                    xpath=//*[@id="myFormText"]/div/div/div/div/div/span
-${locator_unit_search}                        id=text
+${locator_unit_search_field}                  id=text
 ${locator_unit_search_table}                  xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/div/div/div/table/tbody/tr[2]/td[2]/a
 ${locator_unit_search_filter}                 xpath=//*[@id="root"]/div/div/main/div/div[2]/div[2]/button
 ${locator_unit_search_closeicon}              xpath=//*[@id="myFormText"]/div/div/div/div/div/span/span[2]/div
