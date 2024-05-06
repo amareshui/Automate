@@ -25,7 +25,7 @@ Check Unit Page
     Wait Until Element Is Visible          ${locator_program_unit_export}
     Wait Until Element Is Visible          ${locator_unit_search_bar}
     Wait Until Element Is Visible          ${locator_program_unit_table}
-    Wait Until Element Is Visible          ${locator_program_unit_navigator}
+    Wait Until Element Is Visible          ${locator_program_unit_pagination}
 
 Check create Page
     [Arguments]                            ${unitname}
