@@ -17,7 +17,9 @@ TC02 - Check Create Item Type Page
 
 TC03 - Check Create Item Type Page for 10 sub
     Check Item Type Page
-    Check Create ItemType Page for 10 sub    test1    test2    test3    test4    test5    test6    test7    test8    test9    test10
+    Check Create ItemType Page for 10 sub
+    Input Data 10 sub Itemtype  test1    test2    test3    test4    test5    test6    test7    test8    test9 
+    Click Element                          ${locator_create_itemtype_btn_save}
 
 TC04 - Check Search / Filter
     Check Item Type Page

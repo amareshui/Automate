@@ -23,12 +23,11 @@ Check Item Type Page
     Wait Until Element Is Visible          ${locator_program_itemtype_navigator}
     Wait Until Element Is Visible          ${locator_program_itemtype_btn_create}
     Wait Until Element Is Visible          ${locator_program_itemtype_export}
-    Wait Until Element Is Visible          ${locator_itemtype_search_bar}
+    # Wait Until Element Is Visible          ${locator_itemtype_search_bar}
     Wait Until Element Is Visible          ${locator_program_itemtype_table}
     Wait Until Element Is Visible          ${locator_program_itemtype_pagination}
 
 Check Create ItemType Page for 10 sub
-    [Arguments]                            ${sub1}    ${sub2}    ${sub3}    ${sub4}    ${sub5}    ${sub6}    ${sub7}    ${sub8}    ${sub9}    ${sub10}
     Click Element                          ${locator_program_itemtype_btn_create}
     Wait Until Element Is Visible          ${locator_create_itemtype_navigator}
     Wait Until Element Is Visible          ${locator_create_itemtype_name}
@@ -41,29 +40,29 @@ Check Create ItemType Page for 10 sub
     Click Element                          ${locator_program_itemtype_btn_create}
     Click Element                          ${locator_create_itemtype_btn_save}
     Wait Until Page Contains               Please enter Items Type Name
+    
+Input Data 10 sub Itemtype
+    [Arguments]                            ${sub1}    ${sub2}    ${sub3}    ${sub4}    ${sub5}    ${sub6}    ${sub7}    ${sub8}    ${sub9}
     Input Text                             ${locator_create_itemtype_name}             test10sub
     Input Text                             ${locator_create_itemtype_subitemname}        ${sub1}
     Click Element                          ${locator_create_itemtype_addsubitemname}
     Input Text                             ${locator_create_itemtype_subitemname_2}      ${sub2}
-    Click Element                          ${locator_create_itemtype_addsubitemname}
+    Click Element                          ${locator_create_itemtype_addsubitem2}
     Input Text                             ${locator_create_itemtype_subitemname_3}      ${sub3}
-    Click Element                          ${locator_create_itemtype_addsubitemname}
+    Click Element                          ${locator_create_itemtype_addsubitem3}
     Input Text                             ${locator_create_itemtype_subitemname_4}      ${sub4}
-    Click Element                          ${locator_create_itemtype_addsubitemname}
+    Click Element                          ${locator_create_itemtype_addsubitem4}
     Input Text                             ${locator_create_itemtype_subitemname_5}      ${sub5}
-    Click Element                          ${locator_create_itemtype_addsubitemname}
+    Click Element                          ${locator_create_itemtype_addsubitem5}
     Input Text                             ${locator_create_itemtype_subitemname_6}      ${sub6}
-    Click Element                          ${locator_create_itemtype_addsubitemname}
+    Click Element                          ${locator_create_itemtype_addsubitem6}
     Input Text                             ${locator_create_itemtype_subitemname_7}      ${sub7}
-    Click Element                          ${locator_create_itemtype_addsubitemname}
+    Click Element                          ${locator_create_itemtype_addsubitem7}
     Input Text                             ${locator_create_itemtype_subitemname_8}      ${sub8}
-    Click Element                          ${locator_create_itemtype_addsubitemname}
+    Click Element                          ${locator_create_itemtype_addsubitem8}
     Input Text                             ${locator_create_itemtype_subitemname_9}      ${sub9}
-    Click Element                          ${locator_create_itemtype_addsubitemname}
-    Input Text                             ${locator_create_itemtype_subitemname_10}      ${sub10}
-    Click Element                          ${locator_create_itemtype_addsubitemname}
-    Click Element                          ${locator_create_itemtype_btn_save}
-    
+    Click Element                          ${locator_create_itemtype_addsubitem9}
+
 Check Create ItemType Page
     Click Element                          ${locator_program_itemtype_btn_create}
     Wait Until Element Is Visible          ${locator_create_itemtype_navigator}

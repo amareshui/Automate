@@ -36,6 +36,14 @@ ${locator_create_itemtype_subitemname_8}     name=item_type_subs.7.name
 ${locator_create_itemtype_subitemname_9}     name=item_type_subs.8.name
 ${locator_create_itemtype_subitemname_10}    name=item_type_subs.9.name
 ${locator_create_itemtype_addsubitemname}    xpath=//*[@id="root"]/div/div/main/div/div/div[2]/div/form/div[2]/div/div[2]/div[2]/div/div[1]
+${locator_create_itemtype_addsubitem2}       xpath=//*[@id="root"]/div/div/main/div/div/div[2]/div/form/div[2]/div/div[2]/div[3]/div
+${locator_create_itemtype_addsubitem3}       xpath=//*[@id="root"]/div/div/main/div/div/div[2]/div/form/div[2]/div/div[2]/div[4]/div
+${locator_create_itemtype_addsubitem4}       xpath=//*[@id="root"]/div/div/main/div/div/div[2]/div/form/div[2]/div/div[2]/div[5]/div
+${locator_create_itemtype_addsubitem5}       xpath=//*[@id="root"]/div/div/main/div/div/div[2]/div/form/div[2]/div/div[2]/div[6]/div
+${locator_create_itemtype_addsubitem6}       xpath=//*[@id="root"]/div/div/main/div/div/div[2]/div/form/div[2]/div/div[2]/div[7]/div
+${locator_create_itemtype_addsubitem7}       xpath=//*[@id="root"]/div/div/main/div/div/div[2]/div/form/div[2]/div/div[2]/div[8]/div
+${locator_create_itemtype_addsubitem8}       xpath=//*[@id="root"]/div/div/main/div/div/div[2]/div/form/div[2]/div/div[2]/div[9]/div
+${locator_create_itemtype_addsubitem9}       xpath=//*[@id="root"]/div/div/main/div/div/div[2]/div/form/div[2]/div/div[2]/div[10]/div
 ${locator_create_itemtype_delete_subitem}    xpath=//*[@id="root"]/div/div/main/div/div/div[2]/div/form/div[2]/div/div[2]/div[1]/div[2]/div/div
 ${locator_create_itemtype_btn_cancel}        xpath=//*[@id="root"]/div/div/main/div/div/div[1]/div[2]/div/div[1]/button
 ${locator_create_itemtype_btn_save}          xpath=//*[@id="root"]/div/div/main/div/div/div[1]/div[2]/div/div[2]/button
