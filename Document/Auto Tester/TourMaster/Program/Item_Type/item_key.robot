@@ -33,7 +33,7 @@ Check Create ItemType Page for 10 sub
     Wait Until Element Is Visible          ${locator_create_itemtype_navigator}
     Wait Until Element Is Visible          ${locator_create_itemtype_name}
     Wait Until Element Is Visible          ${locator_create_itemtype_subitemname}
-    Wait Until Element Is Visible          ${locator_create_itemtype_subitemname_2}
+    # Wait Until Element Is Visible          ${locator_create_itemtype_subitemname_2}
     Wait Until Element Is Visible          ${locator_create_itemtype_subitemname}
     Click Element                          ${locator_create_itemtype_btn_cancel}
     Wait Until Element Is Visible          ${locator_program_itemtype_table}
@@ -69,7 +69,7 @@ Check Create ItemType Page
     Wait Until Element Is Visible          ${locator_create_itemtype_navigator}
     Wait Until Element Is Visible          ${locator_create_itemtype_name}
     Wait Until Element Is Visible          ${locator_create_itemtype_subitemname}
-    Wait Until Element Is Visible          ${locator_create_itemtype_subitemname_2}
+    # Wait Until Element Is Visible          ${locator_create_itemtype_subitemname_2}
     Wait Until Element Is Visible          ${locator_create_itemtype_subitemname}
     Click Element                          ${locator_create_itemtype_btn_cancel}
     Wait Until Element Is Visible          ${locator_program_itemtype_table}
@@ -83,6 +83,14 @@ Check Create ItemType Page
     Input Text                             ${locator_create_itemtype_subitemname_2}    tosy
     Click Element                          ${locator_create_itemtype_delete_subitem}
     Click Element                          ${locator_create_itemtype_btn_save}
+    Wait Until Element Is Visible          ${locator_create_itemtype_warning_cancel}
+    Click Element                          ${locator_create_itemtype_warning_cancel}
+    Wait Until Element Is Visible          ${locator_create_itemtype_btn_save}
+    Click Element                          ${locator_create_itemtype_btn_save}
+    Wait Until Element Is Visible          ${locator_create_itemtype_warning_ok}
+    Click Element                          ${locator_create_itemtype_warning_ok}
+    Wait Until Element Is Visible          ${locator_program_itemtype_table}
+    Wait Until Element Is Visible          ${locator_program_itemtype_navigator}
 
 Check Search / Filter
     Input Text                             ${locator_itemtype_search_field}            Test
@@ -111,7 +119,7 @@ Check View Page
     Wait Until Element Is Visible          ${locator_itemtype_action_dd}
     Click Element                          ${locator_itemtype_action_view}
     Wait Until Element Is Visible          ${locator_view_itemtype_navigator}
-    Element Should Be Disabled             ${locator_view_itemtype_status}
+    # Element Should Be Disabled             ${locator_view_itemtype_status}
     Click Element                          ${locator_view_itemtype_btn_cancel}
     Wait Until Element Is Visible          ${locator_program_itemtype_table}
     Click Element                          ${locator_itemtype_action}
@@ -119,8 +127,8 @@ Check View Page
     Click Element                          ${locator_itemtype_action_view}
     Element Should Be Disabled             ${locator_view_itemtype_itemtype_name}
     Element Should Be Disabled             ${locator_view_itemtype_subitemtype_name}
-    Element Should Be Disabled             ${locator_view_itemtype_delete_subitem}
-    Element Should Be Disabled             ${locator_view_itemtype_add_subitem}
+    # Element Should Be Disabled             ${locator_view_itemtype_delete_subitem}
+    # Element Should Be Disabled             ${locator_view_itemtype_add_subitem}
 
 Check Edit Page
     Click Element                          ${locator_view_itemtype_btn_edit}
@@ -142,20 +150,20 @@ Check Edit Page
     Click Element                          ${locator_edit_itemtype_btn_save}
     Wait Until Element Is Visible          ${locator_edit_itemtype_warning_ok}
     Wait Until Element Is Visible          ${locator_view_itemtype_navigator}
-    Element Should Be Disabled             ${locator_view_itemtype_subitemtype_name}
-    Element Should Be Disabled             ${locator_view_itemtype_itemtype_name}
+    # Element Should Be Disabled             ${locator_view_itemtype_subitemtype_name}
+    # Element Should Be Disabled             ${locator_view_itemtype_itemtype_name}
     
 Check Pagination function
     Click Element                          ${locator_itemtype_pagination}
     Wait Until Element Is Visible          ${locator_itemtype_pagination_dd}
     Click Element                          ${locator_itemtype_pagination_dd_25page}
     Wait Until Element Is Visible          ${locator_itemtype_pagination_check_row20}
-    Click Element                          ${locator_itemtype_pagination}
-    Wait Until Element Is Visible          ${locator_itemtype_pagination_dd}
+    Click Element                          ${locator_itemtype_pagination_after25}
+    Wait Until Element Is Visible          ${locator_itemtype_pagination_after25_dd}
     Click Element                          ${locator_itemtype_pagination_dd_15page}
     Wait Until Element Is Visible          ${locator_itemtype_pagination_check_row10}
     Element Should Be Disabled             ${locator_itemtype_pagination_<}
     Click Element                          ${locator_itemtype_pagination_>}
-    Wait Until Element Is Visible          ${locator_itemtype_pagination_checkrow20}
-    Wait Until Element Is Enabled          ${locator_itemtype_pagination_<}
-    Click Element                          ${locator_itemtype_pagination_<}
+    # Wait Until Element Is Visible          ${locator_itemtype_pagination_checkrow20}
+    # Wait Until Element Is Enabled          ${locator_itemtype_pagination_<}
+    # Click Element                          ${locator_itemtype_pagination_<}

@@ -27,4 +27,12 @@ Check Group Type Page
 Check Create Group Type Page
     [Arguments]                            ${grouptype_name}         ${capacity}          ${guide}         ${recommend}
     Click Element                          ${locator_grouptype_btn_create}
+    Wait Until Element Is Visible          ${locator_create_grouptype_navigator}
+    Wait Until Element Is Visible          ${locator_create_grouptype_name}
+    Wait Until Element Is Visible          ${locator_create_grouptype_capacity}
+    Input Text                             ${locator_create_grouptype_name}               ${grouptype_name}
+    ${result}                              Evaluate                                       ${capacity} - ${guide}
+    IF  ${result}
+        
+    END
     

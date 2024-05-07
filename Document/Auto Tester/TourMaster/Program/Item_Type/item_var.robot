@@ -12,12 +12,12 @@ ${locator_btnlogin}                           id=btn_login_submit
 ${locator_icon_left_right}                    xpath=//*[@id="root"]/div/aside/div/div[1]/div[1]/button
 ${locator_dashboard}                          xpath=//*[@id="root"]/div/aside/div/ul/li[1]/span
 ${locator_menu_program}                       xpath=//*[@id="root"]/div/aside/div/ul/li[5]/ul/li[1]/div/span
-${locator_menu_Program_dd}                    xpath=//*[@id="rc-menu-uuid-68547-1-SETTING_PROGRAM-popup"]
-${locator_menu_itemtype}                      xpath=//*[@id="rc-menu-uuid-68547-1-SETTING_PROGRAM-popup"]/li[2]/span
+${locator_menu_Program_dd}                    xpath=//*[@id="rc-menu-uuid-44163-1-SETTING_PROGRAM-popup"]
+${locator_menu_itemtype}                      id=program_itemstype
 
 # Check Itemtype Page
 ${locator_program_itemtype_navigator}        xpath=//*[@id="root"]/div/div/main/div/div[1]/div[1]
-${locator_program_itemtype_btn_create}       xpath=//*[@id="root"]/div/div/main/div/div[1]/div[2]/div/button
+${locator_program_itemtype_btn_create}       xpath=//*[@id="root"]/div/div/main/div/div[1]/div/div/button
 ${locator_program_itemtype_export}           xpath=//*[@id="root"]/div/div/main/div/div[2]/div[1]/button
 ${locator_program_itemtype_table}            xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/div/div
 ${locator_program_itemtype_pagination}       xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul
@@ -48,7 +48,7 @@ ${locator_itemtype_search_bar}               xpath=//*[@id="myFormText"]/div/div
 ${locator_itemtype_search_field}             id=text
 ${locator_itemtype_search_checktable}        xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/div/div/div/table/tbody/tr[1]/td[2]
 ${locator_itemtype_search_closeicon}         xpath=//*[@id="myFormText"]/div/div/div/div/div/span/span[2]/div
-${locator_itemtype_search_filter}            xpath=//*[@id="root"]/div/div/main/div/div[1]/div[2]/div/button
+${locator_itemtype_search_filter}            xpath=//*[@id="root"]/div/div/main/div/div[2]/div[2]/button
 ${locator_itemtype_filter}                   xpath=/html/body/div[3]/div/div[2]/div/div[2]/div/div/div[1]
 ${locator_itemtype_filter_itemtypename}      name=name
 ${locator_itemtype_filter_status}            xpath=/html/body/div[3]/div/div[2]/div/div[2]/div/div/div[1]/div[2]/form/div/div[2]/div/div/div/span[1]
@@ -59,9 +59,9 @@ ${locator_itemtype_filter_btn_search}        xpath=/html/body/div[3]/div/div[2]/
 
 # Check Action Btn
 ${locator_itemtype_action}                   xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/div/div/div/table/tbody/tr[4]/td[6]/a
-${locator_itemtype_action_dd}                xpath=/html/body/div[5]/div/ul
-${locator_itemtype_action_view}              xpath=/html/body/div[5]/div/ul/li[1]/span/div/span
-${locator_itemtype_action_delete}            xpath=/html/body/div[5]/div/ul/li[2]/span/div/span
+${locator_itemtype_action_dd}                xpath=/html/body/div[4]/div/ul
+${locator_itemtype_action_view}              xpath=/html/body/div[4]/div/ul/li[1]/span/div/span
+${locator_itemtype_action_delete}            xpath=/html/body/div[4]/div/ul/li[2]/span/div/span
 
 # Check View Page
 ${locator_view_itemtype_navigator}           xpath=//*[@id="root"]/div/div/main/div/div/div[1]/div[1]
@@ -88,16 +88,18 @@ ${locator_edit_itemtype_warning_cancel}      xpath=/html/body/div[4]/div/div[2]/
 ${locator_edit_itemtype_warning_ok}          xpath=/html/body/div[4]/div/div[2]/div/div[2]/div/div[1]/div/div/div[4]/div[2]/button
 
 # Check Pagination
-${locator_itemtype_pagination}               xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul/li[6]/div/div[1]/span[1]
-${locator_itemtype_pagination_dd}            xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul/li[6]/div/div[2]
+${locator_itemtype_pagination}               xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul/li[5]/div/div[1]
+${locator_itemtype_pagination_dd}            xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul/li[5]/div/div[2]/div/div/div
 ${locator_itemtype_pagination_dd_25page}     xpath=//*[@id="rc_select_1_list_1"]
 ${locator_itemtype_pagination_check_row20}   xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/div/div/div/table/tbody/tr[20]
+${locator_itemtype_pagination_after25}       xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul/li[4]/div/div[1]
+${locator_itemtype_pagination_after25_dd}    xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul/li[4]/div/div[2]/div/div/div
 ${locator_itemtype_pagination_dd_15page}     xpath=//*[@id="rc_select_1_list_0"]
 ${locator_itemtype_pagination_check_row10}   xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/div/div/div/table/tbody/tr[10]
 ${locator_itemtype_pagination_<}             xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul/li[1]/button
 ${locator_itemtype_pagination_num1}          xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul/li[2]
 ${locator_itemtype_pagination_num2}          xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul/li[3]
 ${locator_itemtype_pagination_num3}          xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul/li[4]
-${locator_itemtype_pagination_>}             xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul/li[5]/button
+${locator_itemtype_pagination_>}             xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul/li[4]/button
 ${locator_itemtype_pagination_checkrow20}    xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/div/div/div/table/tbody/tr[5]
 ${locator_itemtype_pagination_checkrow32}    xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/div/div/div/table/tbody/tr[2]

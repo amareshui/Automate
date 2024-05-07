@@ -29,6 +29,7 @@ TC05 - Check View Page
 
 TC06 - Check Edit Page
     Check Item Type Page
+    Check View Page
     Check Edit Page
 
 TC07 - Check Pagination
