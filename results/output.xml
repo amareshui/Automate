@@ -1,199 +1,200 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on darwin)" generated="2024-05-07T12:07:54.406920" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.2 on darwin)" generated="2024-05-07T18:12:38.464422" rpa="false" schemaversion="5">
 <suite id="s1" name="Automate HUi" source="/Users/tester/Desktop/Automate HUi">
 <suite id="s1-s1" name="Document" source="/Users/tester/Desktop/Automate HUi/Document">
 <suite id="s1-s1-s1" name="Auto Tester" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester">
 <suite id="s1-s1-s1-s1" name="TourMaster" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/TourMaster">
-<suite id="s1-s1-s1-s1-s1" name="Program" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/TourMaster/Program">
-<suite id="s1-s1-s1-s1-s1-s1" name="Item Type" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/TourMaster/Program/Item_Type">
-<suite id="s1-s1-s1-s1-s1-s1-s1" name="Item" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/TourMaster/Program/Item_Type/item.robot">
+<suite id="s1-s1-s1-s1-s1" name="Vehicle" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/TourMaster/Vehicle">
+<suite id="s1-s1-s1-s1-s1-s1" name="Group Type" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/TourMaster/Vehicle/Group_Type">
+<suite id="s1-s1-s1-s1-s1-s1-s1" name="GroupType" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/TourMaster/Vehicle/Group_Type/GroupType.robot">
 <kw name="Set Selenium Speed" owner="SeleniumLibrary" type="SETUP">
 <arg>0.5s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2024-05-07T12:07:54.491958" elapsed="0.000179"/>
+<status status="PASS" start="2024-05-07T18:12:38.544194" elapsed="0.000192"/>
 </kw>
-<test id="s1-s1-s1-s1-s1-s1-s1-t1" name="TC07 - Check Pagination" line="35">
-<kw name="Open Web &amp; Input for login" owner="item_key" type="SETUP">
+<test id="s1-s1-s1-s1-s1-s1-s1-t1" name="TC06 - Check Pagination" line="32">
+<kw name="Open Web &amp; Input for login" owner="GroupType_key" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-05-07T12:07:54.493066" level="INFO">Opening browser 'chrome' to base url 'https://dev-tm.techmaster.in.th/login'.</msg>
+<msg time="2024-05-07T18:12:38.545186" level="INFO">Opening browser 'chrome' to base url 'https://dev-tm.techmaster.in.th/login'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-05-07T12:07:54.492883" elapsed="2.775077"/>
+<status status="PASS" start="2024-05-07T18:12:38.545037" elapsed="2.809336"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-05-07T12:07:57.268898" elapsed="0.875429"/>
+<status status="PASS" start="2024-05-07T18:12:41.354681" elapsed="0.884095"/>
 </kw>
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
 <arg>0.5s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2024-05-07T12:07:58.144740" elapsed="0.000888"/>
+<status status="PASS" start="2024-05-07T18:12:42.239228" elapsed="0.000436"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-07T12:07:58.147022" level="INFO">Typing text 'superadmin' into text field 'name=username'.</msg>
+<msg time="2024-05-07T18:12:42.240103" level="INFO">Typing text 'superadmin' into text field 'name=username'.</msg>
 <arg>${locator_username}</arg>
 <arg>superadmin</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-07T12:07:58.145851" elapsed="1.637797"/>
+<status status="PASS" start="2024-05-07T18:12:42.239760" elapsed="1.620824"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-07T12:07:59.785512" level="INFO">Typing text 'P@ssw0rd' into text field 'name=password'.</msg>
+<msg time="2024-05-07T18:12:43.861175" level="INFO">Typing text 'P@ssw0rd' into text field 'name=password'.</msg>
 <arg>${locator_password}</arg>
 <arg>P@ssw0rd</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-07T12:07:59.784500" elapsed="1.576244"/>
+<status status="PASS" start="2024-05-07T18:12:43.860844" elapsed="1.568364"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-07T12:08:01.361410" level="INFO">Clicking element 'id=btn_login_submit'.</msg>
+<msg time="2024-05-07T18:12:45.430764" level="INFO">Clicking element 'id=btn_login_submit'.</msg>
 <arg>${locator_btnlogin}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-07T12:08:01.361060" elapsed="1.036809"/>
+<status status="PASS" start="2024-05-07T18:12:45.429834" elapsed="1.064583"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>Dashboard</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-05-07T12:08:02.398078" elapsed="0.514390"/>
+<status status="PASS" start="2024-05-07T18:12:46.494979" elapsed="0.539687"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-05-07T12:08:03.915780" level="INFO">Slept 1 second.</msg>
+<msg time="2024-05-07T18:12:48.036248" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-05-07T12:08:02.913651" elapsed="1.002322"/>
+<status status="PASS" start="2024-05-07T18:12:47.034830" elapsed="1.001716"/>
 </kw>
-<status status="PASS" start="2024-05-07T12:07:54.492629" elapsed="9.423525"/>
+<status status="PASS" start="2024-05-07T18:12:38.544846" elapsed="9.491866"/>
 </kw>
-<kw name="Check Item Type Page" owner="item_key">
+<kw name="Check Group Type Page" owner="GroupType_key">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-07T12:08:03.917392" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/aside/div/ul/li[5]/ul/li[1]/div/span'.</msg>
-<arg>${locator_menu_program}</arg>
+<msg time="2024-05-07T18:12:48.037947" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/aside/div/ul/li[5]/ul/li[3]/div'.</msg>
+<arg>${locator_menu_vehicle}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-07T12:08:03.917105" elapsed="1.079179"/>
+<status status="PASS" start="2024-05-07T18:12:48.037646" elapsed="1.058319"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_menu_itemtype}</arg>
+<arg>${locator_menu_grouptype}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-07T12:08:04.996459" elapsed="1.021983"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-07T12:08:06.018987" level="INFO">Clicking element 'id=program_itemstype'.</msg>
-<arg>${locator_menu_itemtype}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-07T12:08:06.018676" elapsed="1.121786"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_program_itemtype_navigator}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-07T12:08:07.140933" elapsed="1.032815"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_program_itemtype_btn_create}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-07T12:08:08.174013" elapsed="1.025572"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_program_itemtype_export}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-07T12:08:09.200211" elapsed="1.030638"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_itemtype_search_bar}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-07T12:08:10.231575" elapsed="1.031134"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_program_itemtype_table}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-07T12:08:11.263392" elapsed="1.027284"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_program_itemtype_pagination}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-07T12:08:12.291627" elapsed="1.032374"/>
-</kw>
-<status status="PASS" start="2024-05-07T12:08:03.916693" elapsed="9.407951"/>
-</kw>
-<kw name="Check Pagination function" owner="item_key">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-07T12:08:13.327729" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul/li[5]/div/div[1]'.</msg>
-<arg>${locator_itemtype_pagination}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-07T12:08:13.326854" elapsed="1.058973"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_itemtype_pagination_dd}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-07T12:08:14.386023" elapsed="1.034407"/>
+<status status="PASS" start="2024-05-07T18:12:49.096315" elapsed="1.020913"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-07T12:08:15.421741" level="INFO">Clicking element 'xpath=//*[@id="rc_select_1_list_1"]'.</msg>
-<arg>${locator_itemtype_pagination_dd_25page}</arg>
+<msg time="2024-05-07T18:12:50.117691" level="INFO">Clicking element 'id=vehicle_grouptype'.</msg>
+<arg>${locator_menu_grouptype}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-07T12:08:15.420977" elapsed="1.104232"/>
+<status status="PASS" start="2024-05-07T18:12:50.117452" elapsed="1.112020"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_itemtype_pagination_check_row20}</arg>
+<arg>${locator_grouptype_navigator}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-07T12:08:16.525892" elapsed="1.034946"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-07T12:08:17.561721" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul/li[4]/div/div[1]'.</msg>
-<arg>${locator_itemtype_pagination_after25}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-07T12:08:17.561215" elapsed="1.066267"/>
+<status status="PASS" start="2024-05-07T18:12:51.229722" elapsed="1.025661"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_itemtype_pagination_after25_dd}</arg>
+<arg>${locator_grouptype_table}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-07T12:08:18.628102" elapsed="1.034061"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-07T12:08:19.663916" level="INFO">Clicking element 'xpath=//*[@id="rc_select_1_list_0"]'.</msg>
-<arg>${locator_itemtype_pagination_dd_15page}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-07T12:08:19.662873" elapsed="1.103523"/>
+<status status="PASS" start="2024-05-07T18:12:52.255636" elapsed="1.028917"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_itemtype_pagination_check_row10}</arg>
+<arg>${locator_grouptype_btn_create}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-07T12:08:20.766874" elapsed="1.032585"/>
+<status status="PASS" start="2024-05-07T18:12:53.284858" elapsed="1.024669"/>
 </kw>
-<kw name="Element Should Be Disabled" owner="SeleniumLibrary">
-<arg>${locator_itemtype_pagination_&lt;}</arg>
-<doc>Verifies that element identified by ``locator`` is disabled.</doc>
-<status status="PASS" start="2024-05-07T12:08:21.800065" elapsed="1.031133"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_grouptype_export}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T18:12:54.310135" elapsed="1.029656"/>
+</kw>
+<status status="PASS" start="2024-05-07T18:12:48.037217" elapsed="7.302930"/>
+</kw>
+<kw name="Check Pegination" owner="GroupType_key">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-07T18:12:55.341553" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul/li[8]/div/div[1]'.</msg>
+<arg>${locator_grouptype_pagination}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-07T18:12:55.341184" elapsed="1.071162"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_grouptype_pagination_page_dd}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T18:12:56.412531" elapsed="1.020501"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-07T12:08:22.832712" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul/li[4]/button'.</msg>
-<arg>${locator_itemtype_pagination_&gt;}</arg>
+<msg time="2024-05-07T18:12:57.433802" level="INFO">Clicking element 'xpath=//*[@id="rc_select_1_list_1"]'.</msg>
+<arg>${locator_grouptype_pagination_25page}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-07T12:08:22.831833" elapsed="1.092937"/>
+<status status="PASS" start="2024-05-07T18:12:57.433358" elapsed="1.077872"/>
 </kw>
-<status status="PASS" start="2024-05-07T12:08:13.325474" elapsed="10.600119"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_grouptype_pagination_table_row20}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T18:12:58.511956" elapsed="1.017180"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-07T18:12:59.529571" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul/li[6]/div/div[1]/span[2]'.</msg>
+<arg>${locaotr_grouptype_pagination_after_25page}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-07T18:12:59.529317" elapsed="1.038099"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_grouptype_pagination_15page}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T18:13:00.567635" elapsed="1.026884"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-07T18:13:01.596161" level="INFO">Clicking element 'xpath=//*[@id="rc_select_1_list_0"]'.</msg>
+<arg>${locator_grouptype_pagination_15page}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-07T18:13:01.595167" elapsed="1.078646"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-07T18:13:02.675287" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul/li[3]/a'.</msg>
+<arg>${locator_grouptype_pagination_num_2}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-07T18:13:02.674900" elapsed="1.164938"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_grouptype_pagination_row20_15page}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T18:13:03.840036" elapsed="1.027080"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator_grouptype_pagination_&lt;}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-05-07T18:13:04.867469" elapsed="1.540817"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-07T18:13:06.410106" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul/li[1]/button'.</msg>
+<arg>${locator_grouptype_pagination_&lt;}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-07T18:13:06.409164" elapsed="1.059931"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_grouptype_table}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-07T18:13:07.469267" elapsed="1.016633"/>
+</kw>
+<status status="PASS" start="2024-05-07T18:12:55.340607" elapsed="13.145426"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-07T12:08:23.926472" elapsed="0.565141"/>
+<status status="PASS" start="2024-05-07T18:13:08.486234" elapsed="0.566861"/>
 </kw>
-<status status="PASS" start="2024-05-07T12:07:54.492235" elapsed="29.999536"/>
+<status status="PASS" start="2024-05-07T18:12:38.544495" elapsed="30.508734"/>
 </test>
 <kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-05-07T12:08:24.492435" elapsed="0.000212"/>
+<status status="PASS" start="2024-05-07T18:13:09.053790" elapsed="0.000218"/>
 </kw>
-<status status="PASS" start="2024-05-07T12:07:54.421002" elapsed="30.071704"/>
+<status status="PASS" start="2024-05-07T18:12:38.477380" elapsed="30.576676"/>
 </suite>
-<status status="PASS" start="2024-05-07T12:07:54.420498" elapsed="30.073071"/>
+<status status="PASS" start="2024-05-07T18:12:38.476792" elapsed="30.577790"/>
 </suite>
-<status status="PASS" start="2024-05-07T12:07:54.420007" elapsed="30.074151"/>
+<status status="PASS" start="2024-05-07T18:12:38.476330" elapsed="30.578775"/>
 </suite>
-<status status="PASS" start="2024-05-07T12:07:54.419425" elapsed="30.075233"/>
+<status status="PASS" start="2024-05-07T18:12:38.475509" elapsed="30.580114"/>
 </suite>
-<status status="PASS" start="2024-05-07T12:07:54.418815" elapsed="30.076308"/>
+<status status="PASS" start="2024-05-07T18:12:38.474795" elapsed="30.581104"/>
 </suite>
-<status status="PASS" start="2024-05-07T12:07:54.417970" elapsed="30.077643"/>
+<status status="PASS" start="2024-05-07T18:12:38.474191" elapsed="30.581932"/>
 </suite>
-<status status="PASS" start="2024-05-07T12:07:54.408989" elapsed="30.086968"/>
+<status status="PASS" start="2024-05-07T18:12:38.466534" elapsed="30.589789"/>
 </suite>
 <statistics>
 <total>
@@ -206,9 +207,9 @@
 <stat pass="1" fail="0" skip="0" id="s1-s1" name="Document">Automate HUi.Document</stat>
 <stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Auto Tester">Automate HUi.Document.Auto Tester</stat>
 <stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="TourMaster">Automate HUi.Document.Auto Tester.TourMaster</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="Program">Automate HUi.Document.Auto Tester.TourMaster.Program</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1-s1" name="Item Type">Automate HUi.Document.Auto Tester.TourMaster.Program.Item Type</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1-s1-s1" name="Item">Automate HUi.Document.Auto Tester.TourMaster.Program.Item Type.Item</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="Vehicle">Automate HUi.Document.Auto Tester.TourMaster.Vehicle</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1-s1" name="Group Type">Automate HUi.Document.Auto Tester.TourMaster.Vehicle.Group Type</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1-s1-s1" name="GroupType">Automate HUi.Document.Auto Tester.TourMaster.Vehicle.Group Type.GroupType</stat>
 </suite>
 </statistics>
 <errors>

@@ -12,7 +12,7 @@ ${locator_btnlogin}                               id=btn_login_submit
 ${locator_icon_left_right}                        xpath=//*[@id="root"]/div/aside/div/div[1]/div[1]/button
 ${locator_dashboard}                              xpath=//*[@id="root"]/div/aside/div/ul/li[1]/span
 ${locator_menu_vehicle}                           xpath=//*[@id="root"]/div/aside/div/ul/li[5]/ul/li[3]/div
-${locator_menu_vehicle_dd}                        id=rc-menu-uuid-08323-1-VEHICLE-popup
+# ${locator_menu_vehicle_dd}                        xpath=//*[@id="rc-menu-uuid-65833-1-VEHICLE-popup"]
 ${locator_menu_grouptype}                         id=vehicle_grouptype
 
 # Check Group Type Page
@@ -20,7 +20,7 @@ ${locator_grouptype_navigator}                    xpath=//*[@id="root"]/div/div/
 ${locator_grouptype_btn_create}                   xpath=//*[@id="root"]/div/div/main/div/div[1]/div/div/button
 ${locator_grouptype_export}                       xpath=//*[@id="root"]/div/div/main/div/div[2]/div[1]/button
 ${locator_grouptype_table}                        xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/div/div
-${locator_grouptype_pagination}                   xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul
+${locator_grouptype_pagination_page}              xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul
 
 # Check Create Group Type Page
 ${locator_create_grouptype_navigator}             xpath=//*[@id="root"]/div/div/main/div/div/div[1]
@@ -53,15 +53,17 @@ ${locator_search_grouptype_filter_status_inact}   xpath=/html/body/div[4]/div/di
 ${locator_search_grouptype_filter_btn_clear}      xpath=/html/body/div[3]/div/div[2]/div/div[2]/div/div/div[2]/div[1]/button
 ${locator_search_grouptype_filter_btn_search}     xpath=/html/body/div[3]/div/div[2]/div/div[2]/div/div/div[2]/div[2]/button
 ${locator_search_grouptype_filter_checksearch}    xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/div/div/div/table/tbody/tr[15]/td[2]
+${locator_search_grouptype_filter_closeicon}      xpath=//*[@id="root"]/div/div/main/div/div[2]/div[2]/button/div[2]
 
 
-# Check Action Btn
+# Check Action Btn 
 ${locator_grouptype_action}                       xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/div/div/div/table/tbody/tr[2]/td[6]/a
-${locator_grouptype_action_dd}                    xpath=/html/body/div[5]/div/ul
-${locator_grouptype_action_view}                  xpath=/html/body/div[5]/div/ul/li[1]
-${locator_grouptype_action_delete}                xpath=/html/body/div[5]/div/ul/li[2]
+# ${locator_grouptype_action_dd}                    xpath=/html/body/div[5]/div/ul
+${locator_grouptype_action_view}                  xpath=/html/body/div[4]/div/ul/li[1]
+${locator_grouptype_action_delete}                xpath=/html/body/div[4]/div/ul/li[2]
 
-# Check View Page
+# Check View 
+${locator_view_grouptype_nameview}                xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/div/div/div/table/tbody/tr[2]/td[2]/a
 ${locator_view_grouptype_navigator}               xpath=//*[@id="root"]/div/div/main/div/div/div[1]/div[1]
 ${locator_view_grouptype_name}                    name=name
 ${locator_view_grouptype_capacity}                name=capacity
@@ -87,9 +89,11 @@ ${locator_edit_grouptype_warning_btn_ok}          xpath=/html/body/div[4]/div/di
 # Check Paggination
 ${locator_grouptype_pagination}                   xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul/li[8]/div/div[1]
 ${locator_grouptype_pagination_page_dd}           xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul/li[8]/div/div[2]
-${locator_grouptype_pagination_25page}            xpath=//*[@id="rc_select_11_list_1"]/div
-${locator_grouptype_pagination_table_row20}       xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/div/div/div/table/tbody/tr[20]/td[2]
-${locator_grouptype_pagination_15page}            xpath=//*[@id="rc_select_11_list_0"]/div
+${locator_grouptype_pagination_25page}            xpath=//*[@id="rc_select_1_list_1"]
+${locator_grouptype_pagination_table_row20}       xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/div/div/div/table/tbody/tr[20]
+${locaotr_grouptype_pagination_after_25page}      xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul/li[6]/div/div[1]/span[2]
+${locator_grouptype_pagination_15page}            xpath=//*[@id="rc_select_1_list_0"]
+${locator_grouptype_pagination_row20_15page}      xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/div/div/div/table/tbody/tr[5]
 ${locator_grouptype_pagination_<}                 xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul/li[1]/button
 ${locator_grouptype_pagination_>}                 xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul/li[7]/button
 ${locator_grouptype_pagination_num_2}             xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul/li[3]/a
