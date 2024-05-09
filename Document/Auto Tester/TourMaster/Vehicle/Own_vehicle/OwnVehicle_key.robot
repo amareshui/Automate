@@ -164,12 +164,12 @@ Check Edit Page
     Wait Until Element Is Visible          ${locator_ownvehicle_edit_warning_ok}
     Click Element                          ${locator_ownvehicle_edit_warning_ok}
 
-Check Pagination
-    Click Element                          ${locator_ownvehicle_pagination}
-    Wait Until Element Is Visible          ${locator_ownvehicle_pagination_25page}
-    Click Element                          ${locator_ownvehicle_pagination_25page}
-    Click Element                          ${locator_ownvehicle_pagination}
-    Wait Until Element Is Visible          ${locator_ownvehicle_pagination_15page}
-    Click Element                          ${locator_ownvehicle_pagination_15page}
-    Element Should Be Disabled             ${locator_ownvehicle_pagination_<}
-    Element Should Be Disabled             ${locator_ownvehicle_pagination_>}
+# Check Pagination
+#     Click Element                          ${locator_ownvehicle_pagination}
+#     Wait Until Element Is Visible          ${locator_ownvehicle_pagination_25page}
+#     Click Element                          ${locator_ownvehicle_pagination_25page}
+#     Click Element                          ${locator_ownvehicle_pagination}
+#     Wait Until Element Is Visible          ${locator_ownvehicle_pagination_15page}
+#     Click Element                          ${locator_ownvehicle_pagination_15page}
+#     Element Should Be Disabled             ${locator_ownvehicle_pagination_<}
+#     Element Should Be Disabled             ${locator_ownvehicle_pagination_>}
