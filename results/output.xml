@@ -1,177 +1,496 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on darwin)" generated="2024-05-09T17:56:33.692625" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.2 on darwin)" generated="2024-05-13T18:19:30.709326" rpa="false" schemaversion="5">
 <suite id="s1" name="Automate HUi" source="/Users/tester/Desktop/Automate HUi">
 <suite id="s1-s1" name="Document" source="/Users/tester/Desktop/Automate HUi/Document">
 <suite id="s1-s1-s1" name="Auto Tester" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester">
 <suite id="s1-s1-s1-s1" name="TourMaster" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/TourMaster">
 <suite id="s1-s1-s1-s1-s1" name="Vehicle" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/TourMaster/Vehicle">
-<suite id="s1-s1-s1-s1-s1-s1" name="Own vehicle" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/TourMaster/Vehicle/Own_vehicle">
-<suite id="s1-s1-s1-s1-s1-s1-s1" name="Ownvehicle" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/TourMaster/Vehicle/Own_vehicle/Ownvehicle.robot">
+<suite id="s1-s1-s1-s1-s1-s1" name="Supplier list" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/TourMaster/Vehicle/Supplier_list">
+<suite id="s1-s1-s1-s1-s1-s1-s1" name="Supplier" source="/Users/tester/Desktop/Automate HUi/Document/Auto Tester/TourMaster/Vehicle/Supplier_list/Supplier.robot">
 <kw name="Set Selenium Speed" owner="SeleniumLibrary" type="SETUP">
 <arg>0.5s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2024-05-09T17:56:33.766259" elapsed="0.000184"/>
+<status status="PASS" start="2024-05-13T18:19:30.788499" elapsed="0.000238"/>
 </kw>
-<test id="s1-s1-s1-s1-s1-s1-s1-t1" name="TC06 - Check Pagination" line="29">
-<kw name="Open Web &amp; Input for login" owner="OwnVehicle_key" type="SETUP">
+<test id="s1-s1-s1-s1-s1-s1-s1-t1" name="TC02 - Check Create Supplier Page" line="13">
+<kw name="Open Web &amp; Input for login" owner="Supplier_kay" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-05-09T17:56:33.767275" level="INFO">Opening browser 'chrome' to base url 'https://dev-tm.techmaster.in.th/login'.</msg>
+<msg time="2024-05-13T18:19:30.789515" level="INFO">Opening browser 'chrome' to base url 'https://dev-tm.techmaster.in.th/login'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-05-09T17:56:33.767128" elapsed="1.462544"/>
+<status status="PASS" start="2024-05-13T18:19:30.789364" elapsed="3.075462"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-05-09T17:56:35.230005" elapsed="1.524438"/>
+<status status="PASS" start="2024-05-13T18:19:33.865197" elapsed="0.978717"/>
 </kw>
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
 <arg>0.5s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2024-05-09T17:56:36.754654" elapsed="0.000309"/>
+<status status="PASS" start="2024-05-13T18:19:34.844156" elapsed="0.000343"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-09T17:56:36.755456" level="INFO">Typing text 'superadmin' into text field 'name=username'.</msg>
+<msg time="2024-05-13T18:19:34.845319" level="INFO">Typing text 'superadmin' into text field 'name=username'.</msg>
 <arg>${locator_username}</arg>
 <arg>superadmin</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-09T17:56:36.755052" elapsed="1.666865"/>
+<status status="PASS" start="2024-05-13T18:19:34.844632" elapsed="1.638794"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-09T17:56:38.422740" level="INFO">Typing text 'P@ssw0rd' into text field 'name=password'.</msg>
+<msg time="2024-05-13T18:19:36.486225" level="INFO">Typing text 'P@ssw0rd' into text field 'name=password'.</msg>
 <arg>${locator_password}</arg>
 <arg>P@ssw0rd</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-09T17:56:38.422273" elapsed="1.574740"/>
+<status status="PASS" start="2024-05-13T18:19:36.483674" elapsed="1.577681"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-09T17:56:39.998079" level="INFO">Clicking element 'id=btn_login_submit'.</msg>
+<msg time="2024-05-13T18:19:38.061857" level="INFO">Clicking element 'id=btn_login_submit'.</msg>
 <arg>${locator_btnlogin}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-09T17:56:39.997463" elapsed="1.064653"/>
+<status status="PASS" start="2024-05-13T18:19:38.061587" elapsed="1.038643"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>Dashboard</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-05-09T17:56:41.062400" elapsed="0.531984"/>
+<status status="PASS" start="2024-05-13T18:19:39.100456" elapsed="0.509175"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-05-09T17:56:42.596850" level="INFO">Slept 1 second.</msg>
+<msg time="2024-05-13T18:19:40.612469" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-05-09T17:56:41.594623" elapsed="1.002992"/>
+<status status="PASS" start="2024-05-13T18:19:39.610254" elapsed="1.002460"/>
 </kw>
-<status status="PASS" start="2024-05-09T17:56:33.766928" elapsed="8.831197"/>
+<status status="PASS" start="2024-05-13T18:19:30.789184" elapsed="9.823715"/>
 </kw>
-<kw name="Check Ownvehicle Page" owner="OwnVehicle_key">
+<kw name="Check Supplier Page" owner="Supplier_kay">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-09T17:56:42.603189" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/aside/div/ul/li[5]/ul/li[3]/div'.</msg>
+<msg time="2024-05-13T18:19:40.613988" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/aside/div/ul/li[5]/ul/li[3]/div'.</msg>
 <arg>${locator_menu_vehicle}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-09T17:56:42.601340" elapsed="1.083580"/>
+<status status="PASS" start="2024-05-13T18:19:40.613735" elapsed="1.061437"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_menu_ownvehicle}</arg>
+<arg>${locator_menu_supplier}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-09T17:56:43.685358" elapsed="1.027952"/>
+<status status="PASS" start="2024-05-13T18:19:41.675366" elapsed="1.020489"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-09T17:56:44.713651" level="INFO">Clicking element 'id=vehicle_ownvehicle'.</msg>
-<arg>${locator_menu_ownvehicle}</arg>
+<msg time="2024-05-13T18:19:42.697038" level="INFO">Clicking element 'id=vehicle_supplierlist'.</msg>
+<arg>${locator_menu_supplier}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-09T17:56:44.713461" elapsed="1.133101"/>
+<status status="PASS" start="2024-05-13T18:19:42.696447" elapsed="1.122727"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_ownvehicle_navigator}</arg>
+<arg>${locator_supplier_navigator}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-09T17:56:45.846932" elapsed="1.030916"/>
+<status status="PASS" start="2024-05-13T18:19:43.819402" elapsed="1.025681"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_ownvehicle_table}</arg>
+<arg>${locator_supplier_btn_create}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-09T17:56:46.878119" elapsed="1.028891"/>
+<status status="PASS" start="2024-05-13T18:19:44.845465" elapsed="1.024754"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_ownvehicle_btn_create}</arg>
+<arg>${locator_supplier_table}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-09T17:56:47.907824" elapsed="1.036397"/>
+<status status="PASS" start="2024-05-13T18:19:45.870674" elapsed="1.027472"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_ownvehicle_export}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-09T17:56:48.944993" elapsed="1.032934"/>
+<status status="PASS" start="2024-05-13T18:19:40.613340" elapsed="6.285159"/>
 </kw>
-<status status="PASS" start="2024-05-09T17:56:42.600018" elapsed="7.378812"/>
-</kw>
-<kw name="Check Pagination" owner="OwnVehicle_key">
+<kw name="Check Create Supplier Page" owner="Supplier_kay">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-09T17:56:49.981352" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div/main/div/div[3]/div/div/div/div/ul/li[4]/div/div'.</msg>
-<arg>${locator_ownvehicle_pagination}</arg>
+<msg time="2024-05-13T18:19:46.900364" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div/main/div/div[1]/div/div/button'.</msg>
+<arg>${locator_supplier_btn_create}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-09T17:56:49.980830" elapsed="1.071277"/>
+<status status="PASS" start="2024-05-13T18:19:46.899998" elapsed="1.142049"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<msg time="2024-05-09T17:56:56.695944" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-105.png"&gt;&lt;img src="selenium-screenshot-105.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-05-09T17:56:56.696221" level="FAIL">Element 'xpath=//*[@id="rc_select_12_list_1"]' not visible after 5 seconds.</msg>
-<arg>${locator_ownvehicle_pagination_25page}</arg>
+<arg>${locator_create_supplier_navigator}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="FAIL" start="2024-05-09T17:56:51.052347" elapsed="5.646192">Element 'xpath=//*[@id="rc_select_12_list_1"]' not visible after 5 seconds.</status>
+<status status="PASS" start="2024-05-13T18:19:48.042245" elapsed="1.031334"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<arg>${locator_ownvehicle_pagination_25page}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-05-09T17:56:56.698736" elapsed="0.000091"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_name}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-13T18:19:49.073948" elapsed="1.030040"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-13T18:19:50.104573" elapsed="1.025549"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<arg>${locator_ownvehicle_pagination}</arg>
+<msg time="2024-05-13T18:19:51.130677" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div/main/div/div/div[1]/div[2]/div/div[1]/button'.</msg>
+<arg>${locator_create_supplier_btn_cancel}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-05-09T17:56:56.698914" elapsed="0.000049"/>
+<status status="PASS" start="2024-05-13T18:19:51.130373" elapsed="1.116222"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${locator_ownvehicle_pagination_15page}</arg>
+<arg>${locator_supplier_table}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-05-09T17:56:56.699031" elapsed="0.000043"/>
+<status status="PASS" start="2024-05-13T18:19:52.247033" elapsed="1.023458"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_supplier_btn_create}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-13T18:19:53.270864" elapsed="1.023480"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<arg>${locator_ownvehicle_pagination_15page}</arg>
+<msg time="2024-05-13T18:19:54.294882" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div/main/div/div[1]/div/div/button'.</msg>
+<arg>${locator_supplier_btn_create}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-05-09T17:56:56.699135" elapsed="0.000039"/>
+<status status="PASS" start="2024-05-13T18:19:54.294549" elapsed="1.129442"/>
 </kw>
-<kw name="Element Should Be Disabled" owner="SeleniumLibrary">
-<arg>${locator_ownvehicle_pagination_&lt;}</arg>
-<doc>Verifies that element identified by ``locator`` is disabled.</doc>
-<status status="NOT RUN" start="2024-05-09T17:56:56.699233" elapsed="0.000040"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_btn_next}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-13T18:19:55.424351" elapsed="1.022578"/>
 </kw>
-<kw name="Element Should Be Disabled" owner="SeleniumLibrary">
-<arg>${locator_ownvehicle_pagination_&gt;}</arg>
-<doc>Verifies that element identified by ``locator`` is disabled.</doc>
-<status status="NOT RUN" start="2024-05-09T17:56:56.699383" elapsed="0.000042"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_grouptype}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-13T18:19:56.447395" elapsed="1.026903"/>
 </kw>
-<status status="FAIL" start="2024-05-09T17:56:49.979862" elapsed="6.719677">Element 'xpath=//*[@id="rc_select_12_list_1"]' not visible after 5 seconds.</status>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-13T18:19:57.475279" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div/main/div/div/div[1]/div[2]/div/div[2]/button'.</msg>
+<arg>${locator_create_supplier_btn_next}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T18:19:57.474721" elapsed="1.065425"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Please enter Supplier Name</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-13T18:19:58.540723" elapsed="0.521901"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Please select Group type</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-13T18:19:59.063090" elapsed="0.522949"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-13T18:19:59.587311" level="INFO">Typing text 'sodom' into text field 'name=name'.</msg>
+<arg>${locator_create_supplier_name}</arg>
+<arg>${sup_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T18:19:59.586427" elapsed="1.594847"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-13T18:20:01.182552" level="INFO">Typing text 'sodean' into text field 'name=contract_person'.</msg>
+<arg>${locator_create_supplier_contactperson}</arg>
+<arg>${sup_contact}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T18:20:01.181979" elapsed="1.580014"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-13T18:20:02.762531" level="INFO">Typing text 'supream' into text field 'name=line_id'.</msg>
+<arg>${locator_create_supplier_lineid}</arg>
+<arg>${sup_line}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T18:20:02.762228" elapsed="1.573301"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-13T18:20:04.336508" level="INFO">Typing text '0123456789' into text field 'name=phone'.</msg>
+<arg>${locator_create_supplier_phone}</arg>
+<arg>${sup_phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T18:20:04.335858" elapsed="1.585819"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-13T18:20:05.922809" level="INFO">Typing text 'ama.hu@gm.co' into text field 'name=email'.</msg>
+<arg>${locator_create_supplier_email}</arg>
+<arg>${sup_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T18:20:05.922269" elapsed="1.585752"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-13T18:20:07.508554" level="INFO">Typing text '142/152 sd sdf' into text field 'name=address'.</msg>
+<arg>${locator_create_supplier_address}</arg>
+<arg>${sup_adress}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T18:20:07.508252" elapsed="1.584356"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-13T18:20:09.093783" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div/main/div/div/div[3]/div/div/div[1]/div/div[2]/div/div/div[8]/div[1]/div/div/div/span[1]'.</msg>
+<arg>${locator_create_supplier_country}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T18:20:09.093080" elapsed="1.057701"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_country_select}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-13T18:20:10.151163" elapsed="1.027135"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-13T18:20:11.179078" level="INFO">Clicking element 'xpath=/html/body/div[5]/div/div/div[2]/div/div/div'.</msg>
+<arg>${locator_create_supplier_country_select}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T18:20:11.178700" elapsed="1.051889"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-13T18:20:12.231823" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div/main/div/div/div[3]/div/div/div[1]/div/div[2]/div/div/div[8]/div[2]/div/div/div/span[1]'.</msg>
+<arg>${locator_create_supplier_province}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T18:20:12.231372" elapsed="1.066946"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_province_select}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-13T18:20:13.298684" elapsed="1.026873"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-13T18:20:14.326288" level="INFO">Clicking element 'xpath=/html/body/div[6]/div/div/div[2]/div[1]/div/div/div[1]'.</msg>
+<arg>${locator_create_supplier_province_select}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T18:20:14.325913" elapsed="1.042332"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-13T18:20:15.368834" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div/main/div/div/div[3]/div/div/div[1]/div/div[2]/div/div/div[8]/div[3]/div/div/div/span[1]'.</msg>
+<arg>${locator_create_supplier_district}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T18:20:15.368534" elapsed="1.052170"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_district_select}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-13T18:20:16.421102" elapsed="1.022954"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-13T18:20:17.444858" level="INFO">Clicking element 'xpath=/html/body/div[7]/div/div/div[2]/div[1]/div/div/div[4]'.</msg>
+<arg>${locator_create_supplier_district_select}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T18:20:17.444364" elapsed="1.046453"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-13T18:20:18.491657" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div/main/div/div/div[3]/div/div/div[1]/div/div[2]/div/div/div[8]/div[4]/div/div/div/span[1]'.</msg>
+<arg>${locator_create_supplier_subdistrict}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T18:20:18.491174" elapsed="1.054525"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_subdistrict_select}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-13T18:20:19.546033" elapsed="1.021076"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-13T18:20:20.567897" level="INFO">Clicking element 'xpath=/html/body/div[8]/div/div/div[2]/div/div/div/div[5]'.</msg>
+<arg>${locator_create_supplier_subdistrict_select}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T18:20:20.567384" elapsed="1.045377"/>
+</kw>
+<arg>sup_name=sodom</arg>
+<arg>sup_contact=sodean</arg>
+<arg>sup_line=supream</arg>
+<arg>sup_phone=0123456789</arg>
+<arg>sup_email=ama.hu@gm.co</arg>
+<arg>sup_adress=142/152 sd sdf</arg>
+<doc>ตรวจสอบการสร้าง Supplier หน้า General Detail</doc>
+<status status="PASS" start="2024-05-13T18:19:46.899169" elapsed="34.713935"/>
+</kw>
+<kw name="Check Create Supplier Page Bank Detail" owner="Supplier_kay">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-13T18:20:21.618127" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div/main/div/div/div[3]/div/div/div[2]/div/div[2]/div/div/div/div/div/span[1]'.</msg>
+<arg>${locator_create_supplier_payment}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T18:20:21.617739" elapsed="1.056857"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-05-13T18:20:29.450650" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-13T18:20:29.451142" level="FAIL">Element 'xpath=/html/body/div[5]/div/div/div[2]/div/div/div/div[1]' not visible after 5 seconds.</msg>
+<arg>${locator_create_supplier_payment_banktran}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-05-13T18:20:22.674851" elapsed="6.778802">Element 'xpath=/html/body/div[5]/div/div/div[2]/div/div/div/div[1]' not visible after 5 seconds.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment_cash}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.454010" elapsed="0.000171"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment_credit}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.454376" elapsed="0.000124"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment_chque}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.454669" elapsed="0.000108"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment_banktran}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.454940" elapsed="0.000104"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment_banktr_accname}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.455198" elapsed="0.000099"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment_banktr_accnum}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.455457" elapsed="0.000104"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment_banktr_bank}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.455715" elapsed="0.000098"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment_banktr_accname}</arg>
+<arg>${acc_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.455968" elapsed="0.000120"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment_banktr_accnum}</arg>
+<arg>${acc_num}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.456244" elapsed="0.000158"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment_banktr_bank}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.456559" elapsed="0.000125"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment_banktr_kbank}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.456837" elapsed="0.000104"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment_banktr_kbank}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.457093" elapsed="0.000093"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.457331" elapsed="0.000093"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment_cash}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.457570" elapsed="0.000093"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment_cash}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.457812" elapsed="0.000116"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.458192" elapsed="0.000161"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment_credit}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.458533" elapsed="0.000118"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment_credit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.458855" elapsed="0.000153"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment_credit_name}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.459215" elapsed="0.000117"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment_credit_type}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.459499" elapsed="0.000115"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment_credit_type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.459799" elapsed="0.000391"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment_credit_visa}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.460330" elapsed="0.000089"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment_credit_jcb}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.460549" elapsed="0.000135"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment_credit_unionpay}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.460939" elapsed="0.000129"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment_credit_mastercard}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.461238" elapsed="0.000103"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment_credit_visa}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.461486" elapsed="0.000092"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment_credit_name}</arg>
+<arg>${credit_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.462189" elapsed="0.000156"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.462503" elapsed="0.000096"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment_chque}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.462744" elapsed="0.000089"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${locator_create_supplier_payment_chque}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.462957" elapsed="0.000081"/>
+</kw>
+<arg>acc_name=soso</arg>
+<arg>acc_num=123456789</arg>
+<arg>credit_name=sdasd</arg>
+<doc>ตรวจสอบการใส่ข้อมูล Payment Method ต่างๆ</doc>
+<status status="FAIL" start="2024-05-13T18:20:21.616801" elapsed="7.846462">Element 'xpath=/html/body/div[5]/div/div/div[2]/div/div/div/div[1]' not visible after 5 seconds.</status>
+</kw>
+<kw name="Check Create Supplier Page Group Type" owner="Supplier_kay">
+<doc>ตรวจสอบการเลือก Grouptype</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.463736" elapsed="0.000200"/>
+</kw>
+<kw name="Check Create Group type In Create Supplier" owner="Supplier_kay">
+<doc>ตรวจสอบการสร้าง Group type ใน Create Supplier</doc>
+<status status="NOT RUN" start="2024-05-13T18:20:29.464389" elapsed="0.000128"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-09T17:56:56.699770" elapsed="0.567963"/>
+<status status="PASS" start="2024-05-13T18:20:29.464922" elapsed="0.596310"/>
 </kw>
-<status status="FAIL" start="2024-05-09T17:56:33.766535" elapsed="23.501342">Element 'xpath=//*[@id="rc_select_12_list_1"]' not visible after 5 seconds.</status>
+<status status="FAIL" start="2024-05-13T18:19:30.788841" elapsed="59.272544">Element 'xpath=/html/body/div[5]/div/div/div[2]/div/div/div/div[1]' not visible after 5 seconds.</status>
 </test>
 <kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-05-09T17:56:57.268473" elapsed="0.000176"/>
+<status status="PASS" start="2024-05-13T18:20:30.062219" elapsed="0.000236"/>
 </kw>
-<status status="FAIL" start="2024-05-09T17:56:33.709358" elapsed="23.559341"/>
+<status status="FAIL" start="2024-05-13T18:19:30.725991" elapsed="59.336527"/>
 </suite>
-<status status="FAIL" start="2024-05-09T17:56:33.708728" elapsed="23.560581"/>
+<status status="FAIL" start="2024-05-13T18:19:30.725405" elapsed="59.337878"/>
 </suite>
-<status status="FAIL" start="2024-05-09T17:56:33.708169" elapsed="23.561569"/>
+<status status="FAIL" start="2024-05-13T18:19:30.724923" elapsed="59.338810"/>
 </suite>
-<status status="FAIL" start="2024-05-09T17:56:33.707604" elapsed="23.562506"/>
+<status status="FAIL" start="2024-05-13T18:19:30.724258" elapsed="59.339979"/>
 </suite>
-<status status="FAIL" start="2024-05-09T17:56:33.706959" elapsed="23.563457"/>
+<status status="FAIL" start="2024-05-13T18:19:30.723544" elapsed="59.341098"/>
 </suite>
-<status status="FAIL" start="2024-05-09T17:56:33.706196" elapsed="23.564474"/>
+<status status="FAIL" start="2024-05-13T18:19:30.722625" elapsed="59.342512"/>
 </suite>
-<status status="FAIL" start="2024-05-09T17:56:33.695235" elapsed="23.575674"/>
+<status status="FAIL" start="2024-05-13T18:19:30.711322" elapsed="59.354149"/>
 </suite>
 <statistics>
 <total>
@@ -185,8 +504,8 @@
 <stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Auto Tester">Automate HUi.Document.Auto Tester</stat>
 <stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="TourMaster">Automate HUi.Document.Auto Tester.TourMaster</stat>
 <stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1-s1" name="Vehicle">Automate HUi.Document.Auto Tester.TourMaster.Vehicle</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1-s1-s1" name="Own vehicle">Automate HUi.Document.Auto Tester.TourMaster.Vehicle.Own vehicle</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1-s1-s1-s1" name="Ownvehicle">Automate HUi.Document.Auto Tester.TourMaster.Vehicle.Own vehicle.Ownvehicle</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1-s1-s1" name="Supplier list">Automate HUi.Document.Auto Tester.TourMaster.Vehicle.Supplier list</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1-s1-s1-s1" name="Supplier">Automate HUi.Document.Auto Tester.TourMaster.Vehicle.Supplier list.Supplier</stat>
 </suite>
 </statistics>
 <errors>
