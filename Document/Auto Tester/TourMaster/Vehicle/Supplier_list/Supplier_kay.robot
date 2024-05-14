@@ -104,10 +104,10 @@ Check Create Supplier Page Group Type
     
 Check Create Group type In Create Supplier
     [Documentation]                        ตรวจสอบการสร้าง Group type ใน Create Supplier
-    Wait Until Element Is Visible          ${locator_create_supplier_supplierlogin_btn_back}
-    Click Element                          ${locator_create_supplier_supplierlogin_btn_back}
-    Wait Until Element Is Visible          ${locator_create_supplier_grouptype}
-    Click Element                          ${locator_create_supplier_grouptype}
+    # Wait Until Element Is Visible          ${locator_create_supplier_supplierlogin_btn_back}
+    # Click Element                          ${locator_create_supplier_supplierlogin_btn_back}
+    # Wait Until Element Is Visible          ${locator_create_supplier_grouptype}
+    # Click Element                          ${locator_create_supplier_grouptype}
     Wait Until Element Is Visible          ${locator_create_supplier_create_grouptype}
     Click Element                          ${locator_create_supplier_create_grouptype}
     Wait Until Element Is Visible          ${locator_create_supplier_create_grouptype_table}

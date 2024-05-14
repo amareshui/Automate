@@ -64,7 +64,7 @@ ${locator_create_supplier_grouptype}                  xpath=//*[@id="root"]/div/
 ${locator_create_supplier_grouptype_select1}          name=!@#
 ${locator_create_supplier_grouptype_select2}          name=baba
 # Create Grouptype in supplier
-${locator_create_supplier_create_grouptype}              xpath=/html/body/div[5]/div/div/div[4]/div/div/button
+${locator_create_supplier_create_grouptype}              xpath=/html/body/div[5]/div/div/div[4]
 ${locator_create_supplier_create_grouptype_table}        xpath=/html/body/div[4]/div/div[2]/div/div[2]/div/div/div[1]/div[2]/div/div[1]/div/div/div/div/div/div
 ${locator_create_supplier_create_grouptype_pagina}       xpath=/html/body/div[4]/div/div[2]/div/div[2]/div/div/div[1]/div[2]/div/div[1]/div/div/div/div/div/ul
 ${locator_create_supplier_create_grouptype_name}         name=name
