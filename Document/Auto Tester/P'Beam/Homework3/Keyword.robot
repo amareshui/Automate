@@ -25,6 +25,11 @@ Check result Search
 
 Check Search Select
     [Arguments]    ${role}    ${plan}    ${status}    ${table}    ${msg}
+    IF        ${role} == 0
+        Click Element                          ${locator_search_select_role}
+        Wait Until Element Is Visible          ${locator_search_role_selectrow}
+        Click Element                          ${locator_search_role_selectrow}
+    END
     IF        ${role} == 1
         Click Element                          ${locator_search_select_role}
         Wait Until Element Is Visible          ${locator_search_role_admin}
@@ -46,10 +51,10 @@ Check Search Select
         Wait Until Element Is Visible          ${locator_search_role_subscriber}
         Click Element                          ${locator_search_role_subscriber}
     END
-    IF        ${role} == 0
-        Click Element                          ${locator_search_select_role}
-        Wait Until Element Is Visible          ${locator_search_role_selectrow}
-        Click Element                          ${locator_search_role_selectrow}
+    IF        ${plan} == 0
+        Click Element                          ${locator_search_select_plan}
+        Wait Until Element Is Visible          ${locator_search_plan_selectrow}
+        Click Element                          ${locator_search_plan_selectrow}
     END
     IF        ${plan} == 1
         Click Element                          ${locator_search_select_plan}
@@ -68,6 +73,11 @@ Check Search Select
         Wait Until Element Is Visible          ${locator_search_plan_team}
         Click Element                          ${locator_search_plan_team}
     END
+    IF        ${status} == 0
+        Click Element                          ${locator_search_select_status}
+        Wait Until Element Is Visible          ${locator_search_status_selectrow}
+        Click Element                          ${locator_search_status_selectrow}
+    END
     IF        ${status} == 1
         Click Element                          ${locator_search_select_status}
         Wait Until Element Is Visible          ${locator_search_status_pending}
@@ -81,6 +91,7 @@ Check Search Select
         Wait Until Element Is Visible          ${locator_search_status_inactive}
         Click Element                          ${locator_search_status_inactive}
     END
+
     Click Element                              ${locator_search_btn_search}
     Wait Until Element Is Visible              ${locator_table}
     Check result Search                        ${table}            ${msg}
