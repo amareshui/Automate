@@ -13,6 +13,18 @@ Open Web Kru P'Beam & Login
     Click Element                             ${locator_hidden_eye}
     Click Element                             ${locator_btn_login}
 
+Open Web Kru P'Beam & Login & add user
+    [Arguments]                               ${email}                               ${password}
+    Open Browser                              ${url}                                ${browser}
+    Wait Until Element Is Visible             ${locator_Email}
+    Wait Until Element Is Visible             ${locator_password}
+    Input Text                                ${locator_Email}                       ${email}
+    Input Text                                ${locator_password}                    ${password}
+    Click Element                             ${locator_hidden_eye}
+    Click Element                             ${locator_btn_login}
+    Wait Until Element Is Visible             ${locator_btn_add_user}
+    Click Element                             ${locator_btn_add_user}
+
 # Search Page
 Search Page
     Wait Until Element Is Visible             ${locator_search_select_role}
@@ -104,3 +116,100 @@ Check Search Clear
     Wait Until Element Is Visible          ${locator_search_plan_company}
     Click Element                          ${locator_search_plan_company}
     Click Element                          ${locator_search_btn_clear}
+
+Select Nationality
+    Click Element                          ${locator_add_user_nationality}
+    Wait Until Element Is Visible          ${locator_add_user_nationality_thai}
+    Click Element                          ${locator_add_user_nationality_thai}
+
+Select Role
+    Click Element                          ${locator_add_user_select_role}
+    Wait Until Element Is Visible          ${locator_add_user_select_role_admin}
+    Click Element                          ${locator_add_user_select_role_admin}
+
+Select Plan
+    Click Element                          ${locator_add_user_select_plan}
+    Wait Until Element Is Visible          ${locator_add_user_select_plan_basic}
+    Click Element                          ${locator_add_user_select_plan_basic}
+
+Add User Pass
+    [Arguments]    ${fname}    ${lname}    ${email}    ${pw}    ${phone}    ${gender}    ${course}    ${national}    ${role}    ${plan}
+    Click Element                               ${locator_btn_add_user}
+    Wait Until Element Is Visible               ${locator_add_user_firstname}
+    Input Text                                  ${locator_add_user_firstname}        ${fname}
+    Input Text                                  ${locator_add_user_lastname}         ${lname}
+    Input Text                                  ${locator_add_user_email}            ${email}
+    Input Text                                  ${locator_add_user_password}         ${pw}
+    Input Text                                  ${locator_add_user_mobile_phone}     ${phone}
+    IF        "${gender}" == "female"
+        Click Element                           ${locator_add_user_gender_female}
+    ELSE IF    "${gender}" == "male"
+        Click Element                           ${locator_add_user_gender_male}
+    END
+    IF  ${course} == 1
+        Select Checkbox                         ${locator_add_user_sql}
+    ELSE IF    ${course} == 2
+        Select Checkbox                         ${locator_add_user_sql}
+        Select Checkbox                         ${locator_add_user_test_manual}
+    ELSE IF    ${course} == 3
+        Select Checkbox                         ${locator_add_user_automate_test}
+        Select Checkbox                         ${locator_add_user_sql}
+        Select Checkbox                         ${locator_add_user_test_manual}
+    ELSE IF    ${course} == 4
+        Select Checkbox                         ${locator_add_user_automate_test2}
+        Select Checkbox                         ${locator_add_user_automate_test}
+        Select Checkbox                         ${locator_add_user_sql}
+        Select Checkbox                         ${locator_add_user_test_manual}
+    END
+    IF  ${national} == 1
+        Select Nationality
+    END
+    IF  ${role} == 1
+        Select Role
+    END
+    IF  ${plan} == 1
+        Select Plan
+    END
+    Click Element                      ${locator_add_user_btn_sign_up}    
+
+Add User fail
+    [Arguments]    ${fname}    ${lname}    ${email}    ${pw}    ${phone}    ${gender}    ${course}    ${national}    ${role}    ${plan}    ${locator}    ${errmsg}=${EMPTY}
+    Wait Until Element Is Visible               ${locator_add_user_firstname}
+    Input Text                                  ${locator_add_user_firstname}        ${fname}
+    Input Text                                  ${locator_add_user_lastname}         ${lname}
+    Input Text                                  ${locator_add_user_email}            ${email}
+    Input Text                                  ${locator_add_user_password}         ${pw}
+    Input Text                                  ${locator_add_user_mobile_phone}     ${phone}
+    IF        "${gender}" == "female"
+        Click Element                           ${locator_add_user_gender_female}
+    ELSE IF    "${gender}" == "male"
+        Click Element                           ${locator_add_user_gender_male}
+    END
+    IF  ${course} == 1
+        Select Checkbox                         ${locator_add_user_sql}
+    ELSE IF    ${course} == 2
+        Select Checkbox                         ${locator_add_user_sql}
+        Select Checkbox                         ${locator_add_user_test_manual}
+    ELSE IF    ${course} == 3
+        Select Checkbox                         ${locator_add_user_automate_test}
+        Select Checkbox                         ${locator_add_user_sql}
+        Select Checkbox                         ${locator_add_user_test_manual}
+    ELSE IF    ${course} == 4
+        Select Checkbox                         ${locator_add_user_automate_test2}
+        Select Checkbox                         ${locator_add_user_automate_test}
+        Select Checkbox                         ${locator_add_user_sql}
+        Select Checkbox                         ${locator_add_user_test_manual}
+    END
+    IF  ${national} == 1
+        Select Nationality
+    END
+    IF  ${role} == 1
+        Select Role
+    END
+    IF  ${plan} == 1
+        Select Plan
+    END
+    Click Element                      ${locator_add_user_btn_sign_up}
+    ${txt}=        Get Text            ${locator}
+    Should Be Equal As Strings         ${txt}        ${errmsg}
+    Reload Page

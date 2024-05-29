@@ -41,3 +41,40 @@ ${locator_search_status_inactive}                             xpath=//*[@id="opt
 
 # Table
 ${locator_table}                                              xpath=//*[@id="__next"]/div[1]/div[2]/main/div/div[2]/div/div[2]/div[2]/div[2]/div/div/div/div[1]
+
+# Add User
+${locator_btn_add_user}                                       xpath=//*[@id="__next"]/div[1]/div[2]/main/div/div[2]/div/div[1]/div/a
+
+# Page Add User
+${locator_add_user_firstname}                                 xpath=//*[@id="firstname"]
+${locator_add_user_lastname}                                  xpath=//*[@id="lastname"]
+${locator_add_user_email}                                     id=email
+${locator_add_user_password}                                  id=password
+${locator_add_user_mobile_phone}                              id=mobile-phone
+${locator_add_user_gender}                                    name=validation-basic-radio
+${locator_add_user_gender_female}                             xpath=//*[@id="__next"]/div[1]/div[2]/main/div/div[3]/div/div/div/form/div[6]/div/label[1]/span[1]/input
+${locator_add_user_gender_male}                               xpath=//*[@id="__next"]/div[1]/div[2]/main/div/div[3]/div/div/div/form/div[6]/div/label[2]/span[1]/input
+${locator_add_user_sql}                                       name=courses.SQL
+${locator_add_user_test_manual}                               name=courses.Test Manual
+${locator_add_user_automate_test}                             name=courses.Automate Test
+${locator_add_user_automate_test2}                            name=courses.Automate Test2
+${locator_add_user_nationality}                               id=nationality
+${locator_add_user_nationality_thai}                          xpath=//*[@id="menu-"]/div[3]/ul/li[221]
+${locator_add_user_select_role}                               id=select-role
+${locator_add_user_select_role_admin}                         xpath=//*[@id="menu-"]/div[3]/ul/li[1]
+${locator_add_user_select_plan}                               id=select-plan
+${locator_add_user_select_plan_basic}                         xpath=//*[@id="menu-"]/div[3]/ul/li[1]
+${locator_add_user_reset}                                     xpath=//*[@id="reset"]
+${locator_add_user_btn_sign_up}                               xpath=//*[@id="__next"]/div[1]/div[2]/main/div/div[3]/div/div/div/form/button
+
+# error Add user
+${locator_err_firstname}                                      id=error-firstname
+${locator_err_lastname}                                       id=error-lastname
+${locator_err_email}                                          id=error-email
+${locator_err_password}                                       id=error-password
+${locator_err_phone}                                          id=error-mobile-phone
+${locator_err_gender}                                         id=validation-basic-gender
+${locator_err_course}                                         id=validation-basic-courses
+${locator_err_nationality}                                    id=validation-basic-nationality
+${locator_err_role}                                           id=validation-role
+${locator_err_plan}                                           id=validation-plan
