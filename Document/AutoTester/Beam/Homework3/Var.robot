@@ -54,7 +54,7 @@ ${locator_noti_read_all}                                      xpath=/html/body/d
 
 # profile
 ${locator_profile}                                            xpath=//*[@id="__next"]/div[1]/div[2]/header/div/div/div[2]/span/div
-${locator_profile_logout}                                     xpath=/html/body/div[3]/div[3]/ul/li/svg
+${locator_profile_logout}                                     xpath=/html/body/div[3]/div[3]/ul/li
 
 # Add User
 ${locator_btn_add_user}                                       xpath=//*[@id="__next"]/div[1]/div[2]/main/div/div[2]/div/div[1]/div/a

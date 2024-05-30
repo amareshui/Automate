@@ -111,7 +111,7 @@ Check Search Select
 Notification & Profile
     Click Element                             ${locator_noti}
     Wait Until Element Is Visible             ${locator_noti_read_all}
-    Reload Page
+    Click Element                             ${locator_noti_read_all}
     Click Element                             ${locator_profile}
     Wait Until Element Is Visible             ${locator_profile_logout}
     Sleep                                     1s
@@ -120,6 +120,7 @@ Notification & Profile
     Wait Until Element Is Visible             ${locator_password}
         
 Check Search Clear & Check Pagination
+    Wait Until Element Is Visible          ${locator_search_select_role}
     Click Element                          ${locator_search_select_role}
     Wait Until Element Is Visible          ${locator_search_role_author}
     Click Element                          ${locator_search_role_author}
