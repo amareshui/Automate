@@ -194,7 +194,7 @@ Add User Pass
         Select Plan
     END
     Click Element                               ${locator_add_user_btn_sign_up}
-    Wait Until Element Is Visible               ${locator_add_user_warning}
+    Wait Until Element Is Visible               ${locator_add_user_warning_btn_ok}
     Click Element                               ${locator_add_user_warning_btn_ok}
 
 Check Add User Pass
