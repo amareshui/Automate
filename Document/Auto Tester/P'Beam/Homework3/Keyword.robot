@@ -108,7 +108,18 @@ Check Search Select
     Wait Until Element Is Visible              ${locator_table}
     Check result Search                        ${table}            ${msg}
 
-Check Search Clear
+Notification & Profile
+    Click Element                             ${locator_noti}
+    Wait Until Element Is Visible             ${locator_noti_read_all}
+    Reload Page
+    Click Element                             ${locator_profile}
+    Wait Until Element Is Visible             ${locator_profile_logout}
+    Sleep                                     1s
+    Click Element                             ${locator_profile_logout}
+    Wait Until Element Is Visible             ${locator_Email}
+    Wait Until Element Is Visible             ${locator_password}
+        
+Check Search Clear & Check Pagination
     Click Element                          ${locator_search_select_role}
     Wait Until Element Is Visible          ${locator_search_role_author}
     Click Element                          ${locator_search_role_author}
@@ -116,6 +127,18 @@ Check Search Clear
     Wait Until Element Is Visible          ${locator_search_plan_company}
     Click Element                          ${locator_search_plan_company}
     Click Element                          ${locator_search_btn_clear}
+    Click Element                          ${locator_search_btn_search}
+    Wait Until Element Is Visible          ${locator_table_all}
+    Execute JavaScript                     window.scrollTo(0, document.body.scrollHeight)
+    Wait Until Element Is Visible          ${locator_pagination_count}
+    Click Element                          ${locator_pagination_count}
+    Click Element                          ${locator_pagination_50}
+    Execute JavaScript                     window.scrollTo(0, document.body.scrollHeight)
+    Wait Until Element Is Visible          ${locator_pagination_page50}
+    Click Element                          ${locator_pagination_>}
+    Wait Until Element Is Enabled          ${locator_pagination_<}
+    Click Element                          ${locator_pagination_<}
+    
 
 Select Nationality
     Click Element                          ${locator_add_user_nationality}
@@ -170,7 +193,22 @@ Add User Pass
     IF  ${plan} == 1
         Select Plan
     END
-    Click Element                      ${locator_add_user_btn_sign_up}    
+    Click Element                               ${locator_add_user_btn_sign_up}
+    Wait Until Element Is Visible               ${locator_add_user_warning}
+    Click Element                               ${locator_add_user_warning_btn_ok}
+
+Check Add User Pass
+    Wait Until Element Is Visible               ${locator_search_select_role}
+    Wait Until Element Is Visible               ${locator_search_select_plan}
+    Click Element                               ${locator_search_select_role}
+    Wait Until Element Is Visible               ${locator_search_role_admin}
+    Click Element                               ${locator_search_role_admin}
+    Click Element                               ${locator_search_select_plan}
+    Wait Until Element Is Visible               ${locator_search_plan_basic}
+    Click Element                               ${locator_search_plan_basic}
+    Click Element                               ${locator_search_btn_search}
+    Wait Until Page Contains                    test
+
 
 Add User fail
     [Arguments]    ${fname}    ${lname}    ${email}    ${pw}    ${phone}    ${gender}    ${course}    ${national}    ${role}    ${plan}    ${locator}    ${errmsg}=${EMPTY}

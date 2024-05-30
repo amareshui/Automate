@@ -7,7 +7,7 @@ Test Teardown                                          Close Browser
 Suite Teardown                                         Close All Browsers
 
 *** Test Cases ***
-Tc01 - Search Page
+Tc01 - Filter in Search Page
     [Documentation]    ตรวจสอบการค้นหาในรูปแบบต่างๆ
     [Template]    Check Search Select
     1    0    0    ${locator_table}    Admin
@@ -28,15 +28,16 @@ Tc01 - Search Page
     1    0    1    ${locator_table}    Admin
     4    3    2    ${locator_table}    Active
 
-Tc02 - Clear btn
-    [Documentation]    ทดสอบปุ่ม Clear
-    Check Search Clear
+Tc02 - Check Search Page
+    [Documentation]    ทดสอบปุ่ม Clear และตรวจสอบหน้าต่างของ Search Page
+    Check Search Clear & Check Pagination
+    Notification & Profile
+    
 
 Tc03 - Add User Pass
-    [Documentation]    เพิ่มพนักงาน
-    [Template]    Add User Pass
-    test    test    test@gmail.com    test123    0812345679    female    3    1    1    1
-    
+    Add User Pass    test    test    test@gmail.com    test123    0812345679    female    3    1    1    1
+    Check Add User Pass
+
 Tc04 - Add User Fail
     [Setup]        Open Web Kru P'Beam & Login & add user   user.test@krupbeam.com    123456789    
     [Documentation]    เพิ่มพนักงานไม่ผ่านกรณีต่างๆ

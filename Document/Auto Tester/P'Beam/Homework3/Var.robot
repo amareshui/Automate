@@ -41,6 +41,20 @@ ${locator_search_status_inactive}                             xpath=//*[@id="opt
 
 # Table
 ${locator_table}                                              xpath=//*[@id="__next"]/div[1]/div[2]/main/div/div[2]/div/div[2]/div[2]/div[2]/div/div/div/div[1]
+${locator_table_all}                                          xpath=//*[@id="__next"]/div[1]/div[2]/main/div/div[2]/div/div[2]/div[2]/div[2]/div/div/div
+${locator_pagination_count}                                   xpath=//*[@id="__next"]/div[1]/div[2]/main/div/div[2]/div/div[2]/div[3]/div/div[2]/div/div[2]
+${locator_pagination_50}                                      xpath=//*[@id="menu-"]/div[3]/ul/li[3]
+${locator_pagination_page50}                                  xpath=//*[@id="__next"]/div[1]/div[2]/main/div/div[2]/div/div[2]/div[3]/div/div[2]/div/p[2]
+${locator_pagination_>}                                       xpath=//*[@id="__next"]/div[1]/div[2]/main/div/div[2]/div/div[2]/div[3]/div/div[2]/div/div[3]/button[2]
+${locator_pagination_<}                                       xpath=//*[@id="__next"]/div[1]/div[2]/main/div/div[2]/div/div[2]/div[3]/div/div[2]/div/div[3]/button[1]
+
+# Notification
+${locator_noti}                                               xpath=//*[@id="__next"]/div[1]/div[2]/header/div/div/div[2]/button
+${locator_noti_read_all}                                      xpath=/html/body/div[3]/div[3]/ul/li[2]/button
+
+# profile
+${locator_profile}                                            xpath=//*[@id="__next"]/div[1]/div[2]/header/div/div/div[2]/span/div
+${locator_profile_logout}                                     xpath=/html/body/div[3]/div[3]/ul/li/svg
 
 # Add User
 ${locator_btn_add_user}                                       xpath=//*[@id="__next"]/div[1]/div[2]/main/div/div[2]/div/div[1]/div/a
@@ -66,6 +80,8 @@ ${locator_add_user_select_plan}                               id=select-plan
 ${locator_add_user_select_plan_basic}                         xpath=//*[@id="menu-"]/div[3]/ul/li[1]
 ${locator_add_user_reset}                                     xpath=//*[@id="reset"]
 ${locator_add_user_btn_sign_up}                               xpath=//*[@id="__next"]/div[1]/div[2]/main/div/div[3]/div/div/div/form/button
+${locator_add_user_warning}                                   xpath=/html/body/div[3]/div[3]/div
+${locator_add_user_warning_btn_ok}                            xpath=//*[@id="btn-ok"]
 
 # error Add user
 ${locator_err_firstname}                                      id=error-firstname
